@@ -26,7 +26,6 @@ export const milestoneToPoints = (
   milestone: Milestone,
   trackId: TrackId
 ): number => {
-  console.log(trackId);
   if (trackId === "CRAFT") {
     return milestone * 2;
   } else {
