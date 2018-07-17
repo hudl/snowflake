@@ -76,7 +76,7 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: "Michael Jordan",
+    // name: "Michael Jordan",
     title: "Staff Engineer",
     milestoneByTrack: {
       MOBILE: 1,
@@ -160,13 +160,13 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         <div style={{ display: "flex" }}>
           <div style={{ flex: 1 }}>
             <form>
-              <input
+              {/* <input
                 type="text"
                 className="name-input"
                 value={this.state.name}
                 onChange={e => this.setState({ name: e.target.value })}
                 placeholder="Name"
-              />
+              /> */}
               <TitleSelector
                 milestoneByTrack={this.state.milestoneByTrack}
                 currentTitle={this.state.title}
