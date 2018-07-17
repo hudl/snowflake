@@ -46,7 +46,7 @@ export const pointsToLevels = {
   "51": "10"
 };
 
-export const maxLevel = 52;
+export const maxLevel = 64;
 
 export type Track = {
   displayName: string,
@@ -293,48 +293,97 @@ export const tracks: Tracks = {
     milestones: [
       {
         summary: "Tasks are identified and laid out in advance.",
-        signals: [],
-        examples: []
+        signals: ["Completes tasks as they've been assigned"],
+        examples: [
+          "Scheduling meetings",
+          "Moving equipment",
+          "Printing/Making copies of documents"
+        ]
       },
       {
         summary: "Tasks are laid out and defined, but may change periodically.",
-        signals: [],
-        examples: []
+        signals: [
+          "Completes tasks that have been outlined, but has ownership over when they get completed",
+          "Completes a variety of tasks over a given period of time"
+        ],
+        examples: [
+          "Coordinating events",
+          "Responding to questions in slack",
+          "Updating Sync Pages as assigned"
+        ]
       },
       {
         summary:
           "Manage multiple activities, but how those are completed is clear and defined. Work collaboratively with other Hudlies to get things done (execute on plans).  ",
-        signals: [],
-        examples: []
+        signals: [
+          "Works with other Hudlies to meet deadlines and ensure work is complete.",
+          "Owns and executes activities/tasks that are clearly defined, but require autonomy to complete."
+        ],
+        examples: [
+          "Completing assignments on time and with great quality",
+          "Managing time effectively to ensure work is completed as assigned"
+        ]
       },
       {
         summary:
           "General guidance, but some autonomy in how the work gets done. Works collaboratively with other Hudlies to solve problems together.",
-        signals: [],
-        examples: []
+        signals: [
+          "Demonstrates accountability for activities they are assigned.",
+          "Works with other Hudlies to solve problems."
+        ],
+        examples: [
+          "Working on a team to solve a problem together",
+          "Delivering value through daily work within the scope of what's been assigned",
+          "Challenging norms to ensure work is consistently improving"
+        ]
       },
       {
         summary:
           "Work collaboratively to identify and solve problems that may not seem related. Identifies problems that impact Hudl's success regardless of areas of ownership.",
-        signals: [],
-        examples: []
+        signals: [
+          "Works with other Hudlies to identify and solve problems and make connections between competing priorities and/or work that isn't clearly outlined.",
+          "Identifies problems that impact Hudl outside scope of ownership."
+        ],
+        examples: [
+          "Identifying problems that impact Hudl's success and raising those concerns to own leader",
+          "Delivering value through daily work through identifying issues and solving them collaboratively",
+          "Setting personal or team goals based on priorities defined by their leader"
+        ]
       },
       {
         summary:
           "Strategic integration and leadership of important business goals.",
-        signals: [],
-        examples: []
+        signals: [
+          "Leverages strategic thinking to identify and execute business goals for a broad audience (tribe, bet, team, etc)",
+          "Identifies and has ownership/authority to remove dependencies and roadblocks for strategic goals"
+        ],
+        examples: [
+          "Leading strategy sessions for area of ownership",
+          "Identifying key metrics and measuring pogress towards goals",
+          "Bringing roadblocks to leadership's attention"
+        ]
       },
       {
         summary:
           "Direction of a strategic function within and across the organization.",
-        signals: [],
-        examples: []
+        signals: [
+          "Directs vision, strategy and work for an enterprise function that impacts Hudl (i.e. Marketing, Sales, Operations, Engineering, etc).",
+          "Partners collaboritvely with other Enterprise Sr. Leaders to identify dependencies and remove roadblocks."
+        ],
+        examples: [
+          "Leading future strategy sessions for area of ownership that is large-scale in nature",
+          "Identifying key metrics and measuring progress towards goals",
+          "Holding team accountable to delivering results",
+          "Clearly connecting own roadmap to Hudl's Strategy and mountain goals"
+        ]
       },
       {
         summary: "Direction of an Enterprise Function (i.e. C-Suite)",
-        signals: [],
-        examples: []
+        signals: ["Directs vision, strategy and work for all of Hudl."],
+        examples: [
+          "Leads Future Strategy Sessions",
+          "Works directly with the Board"
+        ]
       }
     ]
   },
@@ -342,55 +391,108 @@ export const tracks: Tracks = {
   SERVERS: {
     displayName: "Innovation",
     category: "Scope",
-    description:
-      "The degree to which thinking is constrained by rules, methods, procedures, precedents, policies, strategy, etc",
+    description: "Innovative thinking requirements",
     milestones: [
       {
         summary:
           "Thinking within clear objectives, with no room for iteration.",
-        signals: [],
-        examples: []
+        signals: [
+          "Completes assignments exactly as assigned",
+          "Uses scripts to respond to questions"
+        ],
+        examples: ["Taking direction and executing on it"]
       },
       {
         summary:
           "Thinking within very detailed and precisely defined rules and instructions, with some room for iteration (less than 20%).",
-        signals: [],
-        examples: []
+        signals: [
+          "Asks questions to ensure thorough understanding of tasks assigned",
+          "Makes minor improvements to process to ensure efficiency"
+        ],
+        examples: [
+          "Asking questions to ensure understanding",
+          "Suggesting minor improvements to simple processes"
+        ]
       },
       {
         summary:
           "Precedence and standards exist, but identifying the problem and applying those standards is required.",
-        signals: [],
-        examples: []
+        signals: [
+          "Demonstrates curiosity to identify root cause of issues",
+          "Leverages information available to solve problems"
+        ],
+        examples: [
+          "Using insight to understand problems thoroughly",
+          "Leveraging resources available to identify solutions"
+        ]
       },
       {
         summary:
-          "SEMI-ROUTINE: Thinking within a well-defined area with many precedents covering most situations and/or readily available assistance.",
-        signals: [],
-        examples: []
+          "Thinking within a well-defined area with precedents covering less than half of the situations and/or readily available assistance.",
+        signals: [
+          "Leverages existing knowledge/experience to identify and solve problems",
+          "Asks questions to root cause",
+          "Finds creative solutions to novel problems"
+        ],
+        examples: [
+          "Providing fresh perspective on identified problems",
+          "Asking insightful questions to identify root cause",
+          "Demonstrating creativity in delivering outcomes"
+        ]
       },
       {
         summary:
-          "VARIED: Thinking within multiple, substantially different areas and precedents, with access to assistance.",
-        signals: [],
-        examples: []
+          "Thinking within multiple, substantially different areas and precedents, where innovation is required.",
+        signals: [
+          "Draws connections between seemingly unconnected issues",
+          "Applies innovation and creativity to identify solutions to problems previously not encountered",
+          "Has ownership to implement solutions"
+        ],
+        examples: [
+          "Identifying dependencies that impact project success",
+          "Shifting priorirites to deliver more innovative solutions",
+          "Challenging the status quo"
+        ]
       },
       {
         summary:
-          "Thinking within a defined area and/or objectives (i.e. functional area, tribe or bet), where innivation is required (more than 50% of the role).",
-        signals: [],
-        examples: []
+          "Thinking within a defined area and/or objectives (i.e. functional area, tribe or bet), where innovation is required (more than 50% of the role).",
+        signals: [
+          "Applies innovative thinking to novel problems that impact a defined area or objectives that have already been laid out",
+          "Uses open-ended questions to understand the problems",
+          "Provides recommendations on future strategies"
+        ],
+        examples: [
+          "Identifying future needs and providing recommendations on strategy",
+          "Setting vision and direction for a team",
+          "Demonstrating accountability to deliver novel solutions"
+        ]
       },
       {
         summary:
-          " Thinking within broad area and/or objectives (i.e. work impacts multiple areas) where innovation is required as core part of the role (minimum of 50%).",
-        signals: [],
-        examples: []
+          "Thinking within broad area and/or objectives (i.e. work impacts multiple areas) where innovation is required as core part of the role (minimum of 50%).",
+        signals: [
+          "Applies innovative thinking to novel problems that impact a broad function (enterprise)",
+          "Approaches problems with a beginners mind/open mind",
+          "Provides direction on future strategies"
+        ],
+        examples: [
+          "Identifying strategic direction for Hudl or an enterprise function at Hudl",
+          "Setting vision and direction for an enterprise function that requires innovation",
+          "Demonstrating accountability to deliver innovative solutions"
+        ]
       },
       {
         summary: "Charting the unknown.",
-        signals: [],
-        examples: []
+        signals: [
+          "Defines new areas of focus",
+          "Applies innovation to all strategy and thought",
+          "Seeks to understand competition and how it impacts Hudl's approach"
+        ],
+        examples: [
+          "Identifying new business ideas for Hudl",
+          "Setting the standard and/or disrupting the industry"
+        ]
       }
     ]
   },
@@ -398,43 +500,103 @@ export const tracks: Tracks = {
   PROJECT_MANAGEMENT: {
     displayName: "Complexity",
     category: "Scope",
-    description:
-      "The complexity of the problems encountered and the extent to which original thinking must be employed to arrive at solutions.",
+    description: "Complexity of problems.",
     milestones: [
       {
-        summary: "",
-        signals: [],
-        examples: []
+        summary: "No complexity, problems and solutions cleary laid out.",
+        signals: ["Executes on solutions that have already been defined"],
+        examples: [
+          "Answering questions using a script",
+          "Giving directions to meeting rooms"
+        ]
       },
       {
         summary:
-          "REPETITIVE: Identical situation requiring solution by simple choice of things learned.",
-        signals: [],
-        examples: []
+          "Minimal problems, all requiring solution by simple choice of things learned.",
+        signals: [
+          "Uses Sync to answer simple questions",
+          "Uses job aids/guides to complete tasks"
+        ],
+        examples: [
+          "Giving office tours",
+          "Researching questions and finding answers from a list of solutions",
+          "Updating sync pages with a template"
+        ]
       },
       {
         summary:
-          "PATTERNED: Similar situations requiring solutions by the deciding between known alternatives.",
-        signals: [],
-        examples: []
+          "Similar situations/problems requiring solutions by deciding between known alternatives.",
+        signals: [
+          "Uses sync resources to solve common problems",
+          "Demonstrates judgment in understanding problems to identify solutions"
+        ],
+        examples: [
+          "Asking insightful questions to root cause problems",
+          "Researching solutions and providing clarity on path forward to common problems",
+          "Making suggestions for process improvements"
+        ]
       },
       {
         summary:
-          "VARIABLE: Different situations requring identification of issues, judgment, and the selection of solutions within an area of expertise.",
-        signals: [],
-        examples: []
+          "Different situations/problems requring identification of issues, judgment, and the selection of solutions within an area of expertise.",
+        signals: [
+          "Uses experience and judgement to identify solutions to new problems",
+          "Root causes problems that require a level of expertise in the area"
+        ],
+        examples: [
+          "Working collaboratively to deliver a product or an improvement to an existing product",
+          "Using foresight to share potential risks with Leadership"
+        ]
       },
       {
         summary:
-          "ADAPTIVE: Situation constantly requiring adaptation or development of new solutions through innovative thinking",
-        signals: [],
-        examples: []
+          "Situation/problems constantly require adaptation or development of new solutions.",
+        signals: [
+          "Exibits creativity through development of novel solutions",
+          "Solves problems that are complex and don't have a clear path forward"
+        ],
+        examples: [
+          "Acting as a peer leader to work collaboratively to deliver a new product or a significant improvement on existing product",
+          "Identiifying and removing roadblocks that are critical to project success"
+        ]
       },
       {
         summary:
-          "UNCHARTED: Novel & path finding situations, requiring the development of new concepts and imaginative solutions for which there are no precedents.",
-        signals: [],
-        examples: []
+          "Situations/problems constantly require adaptation or development of new solutions and are almost always (more than 75%) cross-functional in impact.",
+        signals: [
+          "Identifies unique solutions to complex problems that impact multiple areas of Hudl",
+          "Sets vision for cross-functional teams that drive creative solutions"
+        ],
+        examples: [
+          "Pitching and creating a roadmap for a bet",
+          "Leading a bet, tribe or large cross-functional effort"
+        ]
+      },
+      {
+        summary:
+          "Novel and path finding situations/problems, requiring development of new concepts and imaginative solutions for which there are no precedents.",
+        signals: [
+          "Provides creative solutions for problems that impact Hudl's bottom line",
+          "Communicates short and long-term impact and risk of solutions/ideas",
+          "Solves problems for which there is no benchmark (or few examples in the market)"
+        ],
+        examples: [
+          "Completing a thorough assessment of new markets",
+          "Building a strategic roadmap that impacts mountain goals",
+          "Providing Sr. Leadership with a risk/reward analysis of a novel strategy"
+        ]
+      },
+      {
+        summary:
+          "Problems/situations are novel and solutions required are detrimental to the success of Hudl. (must be a core function of the role)",
+        signals: [
+          "Provides innovative solutions to novel problems that are detrimental to Hudl's future"
+        ],
+        examples: [
+          "Providing Sr. Leadership with strategic outlines of competitors and their advantages",
+          "Leading strategy sessions that identify future focuses for Hudl",
+          "Setting long-term vision for Hudl"
+        ]
       }
     ]
   },
@@ -442,55 +604,109 @@ export const tracks: Tracks = {
   COMMUNICATION: {
     displayName: "Ownership",
     category: "Scope",
-    description:
-      "The extent to which the job/role has autonomy to determine meansures and action to be taken to achieve results.",
+    description: "Autonomy and requirement to achieve results.",
     milestones: [
       {
-        summary: "",
-        signals: [],
-        examples: []
+        summary:
+          "Operating within direct and detailed instructions with very close and continuous supervision.",
+        signals: [
+          "Completes tasks as assigned",
+          "Reads or follows directions to completion"
+        ],
+        examples: [
+          "Updating sync pages",
+          "Running audits",
+          "Scheduling meetings"
+        ]
       },
       {
         summary:
-          "CLOSELY CONTROLLED: Operating within direct and detailed instructions with very close and continuous supervision.",
-        signals: [],
-        examples: []
+          "Clear instructions and established work routines, under close supervision.",
+        signals: [
+          "Completes activities that have been clearly outlined",
+          "Works closely with superviser to ensure accuracy and efficiency"
+        ],
+        examples: [
+          "Creating meeting agendas",
+          "Coordinating schedules or events",
+          "Answering simple questions"
+        ]
       },
       {
         summary:
-          "CONTROLLED: Clear instructions and established work routines, under close supervision.",
-        signals: [],
-        examples: []
+          "Operating within standardized practices and/or supervision of progress and results.",
+        signals: [
+          "Reviews results with supervisor/manager on a reqular basis",
+          "Completes activities for which they are provided an overview"
+        ],
+        examples: [
+          "Problem solving issues",
+          "Documenting solutions",
+          "Executing on a project with clear objectives/outcomes"
+        ]
       },
       {
         summary:
-          "STANDARDIZED: Operating within standardized practices, general work instructions and supervision of progress and results.",
-        signals: [],
-        examples: []
+          "Operating within established precendents or well-defined policies and review of end results.",
+        signals: [
+          "Uses guardrails to guide daily activities",
+          "Reviews end results with manager",
+          "Uses policies or precedents to guide decisions"
+        ],
+        examples: [
+          "Delivering a project on time, with exceptional results",
+          "Building roadmap for a defined project"
+        ]
       },
       {
         summary:
-          "GENERALLY REGULATED: Operating within practices and procedures covered by precendents or well-defined policies and review of end results.",
-        signals: [],
-        examples: []
+          "Subject to broad practices/procedures and managerial direction.",
+        signals: [
+          "Makes decisions with input/direction from manager",
+          "Has autonomy to solve problems within area of ownership"
+        ],
+        examples: [
+          "Working collaboratively on a bet or business team",
+          "Leading a project",
+          "Raising concerns about potential roadblocks to delivering outcomes"
+        ]
+      },
+      {
+        summary: "Subject to general direction and broadly defined objectives.",
+        signals: [
+          "Makes strategic decisions with input/direction from Sr. Leadership",
+          "Has autonomy to provide direction/strategy within area of ownership"
+        ],
+        examples: [
+          "Making recommendations on future strategic priorities",
+          "Leading a team or function (i.e. Tribe or bet)",
+          "Working collaboratively to deliver a roadmap - end-to-end"
+        ]
       },
       {
         summary:
-          "CLEARLY DIRECTED: Subject to broad practices and procedures covered by functional precedents and policies and managerial direction.",
-        signals: [],
-        examples: []
+          "Subject only to overall guidance on broad organizational objectives.",
+        signals: [
+          "Reviews results with Sr. Leadership",
+          "Makes decisions autonomously, with insight from Sr. Leadership"
+        ],
+        examples: [
+          "Building strategic plans for an enterprise function",
+          "Aligning strategic work to mountain goals",
+          "Leverging WLB discussions to drive work forward"
+        ]
       },
       {
-        summary:
-          "GENERALLY DIRECTED: Subject to general direction and broadly defined policy objectives.",
-        signals: [],
-        examples: []
-      },
-      {
-        summary:
-          "GUIDED: Subject only to overall guidance on broad organizational objectives and collection of strategic policy.",
-        signals: [],
-        examples: []
+        summary: "Complete ownership, with no oversight beyond the board.",
+        signals: [
+          "Reviews results with the board",
+          "Makes decisions autonomously"
+        ],
+        examples: [
+          "Leading board meetings",
+          "Making strategic decisions for Hudl",
+          "Reviewing financials to impact future decisions"
+        ]
       }
     ]
   },
@@ -498,37 +714,107 @@ export const tracks: Tracks = {
   CRAFT: {
     displayName: "Impact",
     category: "Impact",
-    description:
-      "The nature of the influence (direct or indirect) the job has on end results.",
+    description: "Delivering value. Weighted double.",
     milestones: [
       {
-        summary: "",
-        signals: [],
-        examples: []
+        summary: "No impact on finances or other Hudlies.",
+        signals: [
+          "Executes tasks that have been assigned by others and have no impact on finances or other Hudlies"
+        ],
+        examples: ["Scheduling meetings", "Creating meeting agendas"]
       },
       {
         summary:
-          "PRIMARY: No financial impact. Little or no shared responsibility or impact on others.",
-        signals: [],
-        examples: []
+          "No financial impact. Little or no shared responsibility or impact on other Hudlies.",
+        signals: [
+          "Executes activities that have been assigned by others and have no impact on finances",
+          "Works alone"
+        ],
+        examples: [
+          "Processing simple requests",
+          "Answering emails (internal, not with clients)"
+        ]
       },
       {
         summary:
-          "SHARED: Partnership and common responsibiltiies with other roles/functions. OR - impact that reaches one department/business unit.",
-        signals: [],
-        examples: []
+          "Partnership with other roles/functions. OR - impact that reaches one department/business unit.",
+        signals: [
+          "Clearly articulates connection of work to Hudl's mission/vision",
+          "Works collaboratively to deliver value with other Hudlies",
+          "OR",
+          "Delivers outcomes that impact one department or business unit"
+        ],
+        examples: [
+          "Working collaboratively to deliver value",
+          "Building plan to ensure work is connected to team goals/Hudl mission",
+          "Providing coaches or clients with an exceptional experience"
+        ]
       },
       {
         summary:
-          "CONTRIBUTIVE: Works collaboratively to define direction focused on achieving critical business impact. And/or impact that is inter-departmental/multiple business units.",
-        signals: [],
-        examples: []
+          "Works collaboratively to define direction focused on achieving critical business impact. OR - impact that is inter-departmental/multiple business units.",
+        signals: [
+          "Uses judgment to prioritize most impactful work",
+          "Demonstrates insight to define direction that delivers critical business impact for Hudl",
+          "OR",
+          "Delivers outcomes that impact multiple areas"
+        ],
+        examples: [
+          "Prioritizing efforts to ensure maximum impact",
+          "Working cross-functionally to deliver value as a team",
+          "Identifying roadblocks and solutions to ensure exceptional outcomes"
+        ]
+      },
+      {
+        summary: "Sets vision/direction that achieves critical business impact",
+        signals: [
+          "Uses expertise to identify areas that achieve critical business impact",
+          "Demonstrates accountability in delivering results"
+        ],
+        examples: [
+          "Building strategy that impacts critical business results",
+          "Delivering value that is above and beyond what Hudl has seen previously out of this role",
+          "Engaging peers in delivering value collaboratively"
+        ]
       },
       {
         summary:
-          "DIRECTIVE: Defines/sets direction for others to achieve critical business impact. And/or impact that is company-wide.",
-        signals: [],
-        examples: []
+          "Defines/sets direction for others to achieve critical business impact.",
+        signals: [
+          "Uses expertise to identify areas of focus for others to achieve critical business impact",
+          "Demonstrates accountability in delivering results- self and through others"
+        ],
+        examples: [
+          "Building strategy that impacts critical business results through others",
+          "Holds others accountable to delivering exceptional value"
+        ]
+      },
+      {
+        summary:
+          "Impact of decisions are felt throughout most of Hudl and affect the majority of Hudlies (more than 50%).",
+        signals: [
+          "Delivers value that improves Hudl's strategic position",
+          "Provides insight and work that helps Hudl achieve critical business goals",
+          "Connects work directly to Hudl's strategic priorities"
+        ],
+        examples: [
+          "Identifying potential areas of expansion for Hudl",
+          "Delivering value that drives mountain goals and strategic priorities for Hudl"
+        ]
+      },
+      {
+        summary:
+          "Impact of decisions are felt throughout all of Hudl and affect all Hudlies.",
+        signals: [
+          "Delivers value that disrupts the industry",
+          "Demonstrates courage in identifying ideas that will ensure Hudl's success",
+          "Connects work to Hudl's future priorities"
+        ],
+        examples: [
+          "Identifying future strategy",
+          "Setting vision for all of Hudl",
+          "Providing direction that delivers on future vision"
+        ]
       }
     ]
   }
