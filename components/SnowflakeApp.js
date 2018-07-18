@@ -4,7 +4,6 @@ import TrackSelector from "../components/TrackSelector";
 import NightingaleChart from "../components/NightingaleChart";
 import KeyboardListener from "../components/KeyboardListener";
 import Track from "../components/Track";
-import Wordmark from "../components/Wordmark";
 import LevelThermometer from "../components/LevelThermometer";
 import {
   eligibleTitles,
@@ -16,6 +15,11 @@ import PointSummaries from "../components/PointSummaries";
 import type { Milestone, MilestoneMap, TrackId } from "../constants";
 import React from "react";
 import TitleSelector from "../components/TitleSelector";
+
+let Components = undefined;
+if (typeof window !== "undefined") {
+  Components = window.__uniformui_Components;
+}
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -123,50 +127,17 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
   render() {
     return (
-      <main>
-        <style jsx global>{`
-          body {
-            font-family: Helvetica;
-          }
-          main {
-            width: 960px;
-            margin: 0 auto;
-          }
-          .name-input {
-            border: none;
-            display: block;
-            border-bottom: 2px solid #fff;
-            font-size: 30px;
-            line-height: 40px;
-            font-weight: bold;
-            width: 380px;
-            margin-bottom: 10px;
-          }
-          .name-input:hover,
-          .name-input:focus {
-            border-bottom: 2px solid #ccc;
-            outline: 0;
-          }
-          a {
-            color: #888;
-            text-decoration: none;
-          }
-        `}</style>
-        <div style={{ margin: "19px auto 0", width: 142 }}>
+      <main style={{ width: 960, margin: "0 auto" }}>
+        <div>
           <a href="https://hudl.com/" target="_blank">
-            <Wordmark />
+            {typeof window !== "undefined" && (
+              <Components.Icon type="logofull" size="large" />
+            )}
           </a>
         </div>
         <div style={{ display: "flex" }}>
-          <div style={{ flex: 1 }}>
+          <div>
             <form>
-              {/* <input
-                type="text"
-                className="name-input"
-                value={this.state.name}
-                onChange={e => this.setState({ name: e.target.value })}
-                placeholder="Name"
-              /> */}
               <TitleSelector
                 milestoneByTrack={this.state.milestoneByTrack}
                 currentTitle={this.state.title}
@@ -176,7 +147,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
-          <div style={{ flex: 0 }}>
+          <div>
             <NightingaleChart
               milestoneByTrack={this.state.milestoneByTrack}
               focusedTrackId={this.state.focusedTrackId}
