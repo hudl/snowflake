@@ -866,6 +866,1138 @@ export const titles = [
   { label: "Principal Engineer", minPoints: 90 },
   { label: "Director of Engineering", minPoints: 90 }
 ];
+export const hudlRoles = {
+  support: {
+    label: "Support",
+    options: [
+      {
+        label: "Elite Support",
+        value: "Elite Support",
+        scoredata: {
+          Score: 29,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 4,
+          GSD: 3,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Technical Consultant",
+        value: "Technical Consultant",
+        scoredata: {
+          Score: 35,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 5,
+          INNOVATION: 4,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Elite Squad Lead",
+        value: "Elite Squad Lead",
+        scoredata: {
+          Score: 35,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 5,
+          GSD: 5,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 4,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Elite Support Manager",
+        value: "Elite Support Manager",
+        scoredata: {
+          Score: 42,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 5
+        }
+      },
+      {
+        label: "Support Specialist",
+        value: "Support Specialist",
+        scoredata: {
+          Score: 25,
+          KNOWLEDGE: 2,
+          COMMUNICATION: 4,
+          GSD: 2,
+          INNOVATION: 4,
+          COMPLEXITY: 3,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Tech Lead",
+        value: "Tech Lead",
+        scoredata: {
+          Score: 30,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 4,
+          GSD: 4,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Support Lead",
+        value: "Support Lead",
+        scoredata: {
+          Score: 34,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Support Experience Analyst",
+        value: "Support Experience Analyst",
+        scoredata: {
+          Score: 30,
+          KNOWLEDGE: 3,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Support Engineer",
+        value: "Support Engineer",
+        scoredata: {
+          Score: 35,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 4,
+          IMPACT: 4
+        }
+      }
+    ]
+  },
+  scrummasters: {
+    label: "ScrumMasters",
+    options: [
+      {
+        label: "Associate ScrumMaster",
+        value: "Associate ScrumMaster",
+        scoredata: {
+          Score: 30,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 3,
+          COMPLEXITY: 3,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "ScrumMaster",
+        value: "ScrumMaster",
+        scoredata: {
+          Score: 34,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 6,
+          GSD: 4,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Sr ScrumMaster",
+        value: "Sr ScrumMaster",
+
+        scoredata: {
+          Score: 41,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Principal ScrumMaster",
+        value: "Principal ScrumMaster",
+
+        scoredata: {
+          Score: 43,
+          KNOWLEDGE: 7,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 5,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Delivery Manager",
+        value: "Delivery Manager",
+
+        scoredata: {
+          Score: 40,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 5,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 6
+        }
+      },
+      {
+        label: "Senior Delivery Manager",
+        value: "Senior Delivery Manager",
+
+        scoredata: {
+          Score: 45,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 6,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 6
+        }
+      },
+      {
+        label: "Agile Coach",
+        value: "Agile Coach",
+
+        scoredata: {
+          Score: 41,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 4,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 6
+        }
+      },
+      {
+        label: "Senior Agile Coach",
+        value: "Senior Agile Coach",
+
+        scoredata: {
+          Score: 45,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 6,
+          IMPACT: 6
+        }
+      },
+      {
+        label: "Enterprise Agile Coach",
+        value: "Enterprise Agile Coach",
+
+        scoredata: {
+          Score: 47,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 5,
+          COMPLEXITY: 6,
+          OWNERSHIP: 7,
+          IMPACT: 6
+        }
+      }
+    ]
+  },
+  productmanagers: {
+    label: "Product Managers",
+    options: [
+      {
+        label: "Associate Product Manager",
+        value: "Associate Product Manager",
+        scoredata: {
+          Score: 30,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 4,
+          GSD: 3,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Product Manager",
+        value: "Product Manager",
+        scoredata: {
+          Score: 34,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 6,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Sr. PM Team Lead",
+        value: "Sr. PM Team Lead",
+        scoredata: {
+          Score: 41,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Sr. Product Manager",
+        value: "Sr. Product Manager",
+        scoredata: {
+          Score: 41,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Sr. PM Manager",
+        value: "Sr. PM Manager",
+        scoredata: {
+          Score: 43,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 6,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Principal Product Manager",
+        value: "Principal Product Manager",
+        scoredata: {
+          Score: 47,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 6,
+          INNOVATION: 6,
+          COMPLEXITY: 6,
+          OWNERSHIP: 7,
+          IMPACT: 5
+        }
+      },
+      {
+        label: "Product Director",
+        value: "Product Director",
+        scoredata: {
+          Score: 47,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 6,
+          INNOVATION: 6,
+          COMPLEXITY: 6,
+          OWNERSHIP: 7,
+          IMPACT: 5
+        }
+      },
+      {
+        label: "VP Product",
+        value: "VP Product",
+        scoredata: {
+          Score: 49,
+          KNOWLEDGE: 7,
+          COMMUNICATION: 6,
+          GSD: 6,
+          INNOVATION: 7,
+          COMPLEXITY: 6,
+          OWNERSHIP: 7,
+          IMPACT: 5
+        }
+      }
+    ]
+  },
+  engineering: {
+    label: "Engineering",
+    options: [
+      {
+        label: "Engineer I",
+        value: "Engineer I",
+        scoredata: {
+          Score: 30,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 4,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Engineer II",
+        value: "Engineer II",
+        scoredata: {
+          Score: 31,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 4,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Data Scientist I",
+        value: "Data Scientist I",
+        scoredata: {
+          Score: 30,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 4,
+          GSD: 2,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Data Scientist II",
+        value: "Data Scientist II",
+        scoredata: {
+          Score: 33,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 4,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Eng Team Lead",
+        value: "Eng Team Lead",
+        scoredata: {
+          Score: 35,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 6,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Data Scientist Team Lead",
+        value: "Data Scientist Team Lead",
+        scoredata: {
+          Score: 35,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 6,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Eng Tech Lead",
+        value: "Eng Tech Lead",
+        scoredata: {
+          Score: 35,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Data Scientist Tech Lead",
+        value: "Data Scientist Tech Lead",
+        scoredata: {
+          Score: 34,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Sr. Engineer",
+        value: "Sr. Engineer",
+        scoredata: {
+          Score: 34,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Sr. Data Scientist",
+        value: "Sr. Data Scientist",
+        scoredata: {
+          Score: 35,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Sr. Eng Team Lead",
+        value: "Sr. Eng Team Lead",
+        scoredata: {
+          Score: 42,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 5,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Sr. Eng Tech Lead",
+        value: "Sr. Eng Tech Lead",
+        scoredata: {
+          Score: 41,
+          KNOWLEDGE: 7,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 6,
+          COMPLEXITY: 5,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Sr. Data Scientist Team Lead",
+        value: "Sr. Data Scientist Team Lead",
+        scoredata: {
+          Score: 38,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 6,
+          GSD: 4,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Engineering Manager",
+        value: "Engineering Manager",
+        scoredata: {
+          Score: 43,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 6,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Engineering Director",
+        value: "Engineering Director",
+        scoredata: {
+          Score: 43,
+          KNOWLEDGE: 7,
+          COMMUNICATION: 6,
+          GSD: 4,
+          INNOVATION: 6,
+          COMPLEXITY: 6,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "VPE",
+        value: "VPE",
+        scoredata: {
+          Score: 49,
+          KNOWLEDGE: 7,
+          COMMUNICATION: 6,
+          GSD: 6,
+          INNOVATION: 7,
+          COMPLEXITY: 6,
+          OWNERSHIP: 7,
+          IMPACT: 5
+        }
+      }
+    ]
+  },
+  sales: {
+    label: "Sales",
+    options: [
+      {
+        label: "SSR",
+        value: "SSR",
+        scoredata: {
+          Score: 26,
+          KNOWLEDGE: 3,
+          COMMUNICATION: 5,
+          GSD: 3,
+          INNOVATION: 3,
+          COMPLEXITY: 3,
+          OWNERSHIP: 3,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Sr. SSR",
+        value: "Sr. SSR",
+        scoredata: {
+          Score: 31,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "TM",
+        value: "TM",
+        scoredata: {
+          Score: 31,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Sr. TM",
+        value: "Sr. TM",
+        scoredata: {
+          Score: 35,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Sales Manager",
+        value: "Sales Manager",
+        scoredata: {
+          Score: 38,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 6,
+          GSD: 4,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Sr. Sales Manager",
+        value: "Sr. Sales Manager",
+        scoredata: {
+          Score: 42,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 5,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      }
+    ]
+  },
+  it: {
+    label: "IT",
+    options: [
+      {
+        label: "Technician",
+        value: "Technician",
+        scoredata: {
+          Score: 29,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 3,
+          COMPLEXITY: 3,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Administrator",
+        value: "Administrator",
+        scoredata: {
+          Score: 36,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Sr Administrator",
+        value: "Sr Administrator",
+        scoredata: {
+          Score: 42,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 5,
+          OWNERSHIP: 6,
+          IMPACT: 5
+        }
+      }
+    ]
+  },
+  qa: {
+    label: "QA",
+    options: [
+      {
+        label: "Quality Analyst I",
+        value: "Quality Analyst I",
+        scoredata: {
+          Score: 29,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 4,
+          GSD: 3,
+          INNOVATION: 4,
+          COMPLEXITY: 4,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Quality Analyst II",
+        value: "Quality Analyst II",
+        scoredata: {
+          Score: 34,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 4,
+          GSD: 4,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 4,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Senior QA",
+        value: "Senior QA",
+        scoredata: {
+          Score: 38,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 5,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Tech Lead",
+        value: "Tech Lead",
+        scoredata: {
+          Score: 38,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 5,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Team Lead",
+        value: "Team Lead",
+        scoredata: {
+          Score: 38,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 5,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Principal QA",
+        value: "Principal QA",
+        scoredata: {
+          Score: 44,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 6,
+          OWNERSHIP: 5,
+          IMPACT: 5
+        }
+      },
+      {
+        label: "QA Manager",
+        value: "QA Manager",
+        scoredata: {
+          Score: 45,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 6,
+          OWNERSHIP: 6,
+          IMPACT: 5
+        }
+      },
+      {
+        label: "Senior Tech Lead",
+        value: "Senior Tech Lead",
+        scoredata: {
+          Score: 44,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 6,
+          OWNERSHIP: 5,
+          IMPACT: 5
+        }
+      },
+      {
+        label: "VP QA",
+        value: "VP QA",
+        scoredata: {
+          Score: 49,
+          KNOWLEDGE: 7,
+          COMMUNICATION: 6,
+          GSD: 6,
+          INNOVATION: 7,
+          COMPLEXITY: 6,
+          OWNERSHIP: 7,
+          IMPACT: 5
+        }
+      }
+    ]
+  },
+  productdesign: {
+    label: "Product Design",
+    options: [
+      {
+        label: "Product Designer",
+        value: "Product Designer",
+        scoredata: {
+          Score: 29,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 4,
+          GSD: 4,
+          INNOVATION: 3,
+          COMPLEXITY: 4,
+          OWNERSHIP: 4,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Senior Product Designer",
+        value: "Senior Product Designer",
+        scoredata: {
+          Score: 34,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Lead Designer",
+        value: "Lead Designer",
+        scoredata: {
+          Score: 39,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 6,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Design Director",
+        value: "Design Director",
+        scoredata: {
+          Score: 47,
+          KNOWLEDGE: 7,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 7,
+          COMPLEXITY: 6,
+          OWNERSHIP: 6,
+          IMPACT: 5
+        }
+      },
+      {
+        label: "Design Manager",
+        value: "Design Manager",
+        scoredata: {
+          Score: 34,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 3
+        }
+      },
+      {
+        label: "Senior Design Manager",
+        value: "Senior Design Manager",
+        scoredata: {
+          Score: 43,
+          KNOWLEDGE: 6,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 6,
+          COMPLEXITY: 6,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "VP - Design",
+        value: "VP - Design",
+        scoredata: {
+          Score: 49,
+          KNOWLEDGE: 7,
+          COMMUNICATION: 6,
+          GSD: 6,
+          INNOVATION: 7,
+          COMPLEXITY: 6,
+          OWNERSHIP: 7,
+          IMPACT: 5
+        }
+      }
+    ]
+  },
+  peopleops: {
+    label: "People Ops",
+    options: [
+      {
+        label: "Talent Squad Manager",
+        value: "Talent Squad Manager",
+        scoredata: {
+          Score: 38,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 6,
+          COMPLEXITY: 4,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "L&D Manager",
+        value: "L&D Manager",
+        scoredata: {
+          Score: 39,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 6,
+          GSD: 4,
+          INNOVATION: 6,
+          COMPLEXITY: 4,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "HRM",
+        value: "HRM",
+        scoredata: {
+          Score: 38,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 5,
+          GSD: 4,
+          INNOVATION: 6,
+          COMPLEXITY: 4,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Sr. Recruiter",
+        value: "Sr. Recruiter",
+        scoredata: {
+          Score: 35,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 4,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 6,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Recruiter",
+        value: "Recruiter",
+        scoredata: {
+          Score: 32,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 4,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 3,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "HRBP",
+        value: "HRBP",
+        scoredata: {
+          Score: 34,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 4,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 4,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Talent Squad Coordinator",
+        value: "Talent Squad Coordinator",
+        scoredata: {
+          Score: 27,
+          KNOWLEDGE: 3,
+          COMMUNICATION: 4,
+          GSD: 2,
+          INNOVATION: 4,
+          COMPLEXITY: 2,
+          OWNERSHIP: 4,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "Training Developer",
+        value: "Training Developer",
+        scoredata: {
+          Score: 34,
+          KNOWLEDGE: 4,
+          COMMUNICATION: 6,
+          GSD: 3,
+          INNOVATION: 5,
+          COMPLEXITY: 3,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      },
+      {
+        label: "People Ops Dir",
+        value: "People Ops Dir",
+        scoredata: {
+          Score: 49,
+          KNOWLEDGE: 7,
+          COMMUNICATION: 6,
+          GSD: 6,
+          INNOVATION: 6,
+          COMPLEXITY: 6,
+          OWNERSHIP: 8,
+          IMPACT: 5
+        }
+      },
+      {
+        label: "Innovation Lead",
+        value: "Innovation Lead",
+        scoredata: {
+          Score: 39,
+          KNOWLEDGE: 5,
+          COMMUNICATION: 6,
+          GSD: 5,
+          INNOVATION: 5,
+          COMPLEXITY: 5,
+          OWNERSHIP: 5,
+          IMPACT: 4
+        }
+      }
+    ]
+  }
+};
 
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
   const totalPoints = totalPointsFromMilestoneMap(milestoneMap);
