@@ -12,10 +12,10 @@ if (typeof window !== "undefined") {
 type Props = {
   milestoneByTrack: MilestoneMap,
   currentTitle: String,
-  setTitleFn: string => void
+  setTitleFn: Object => void
 };
 
-class TitleSelector extends React.Component {
+class TitleSelector extends React.Component<Props> {
   render() {
     if (typeof window !== "undefined") {
       return (
@@ -23,6 +23,7 @@ class TitleSelector extends React.Component {
           placeholder="Find a role"
           options={hudlRoles}
           id="role-select"
+          onChange={this.props.setTitleFn}
         />
       );
     }
