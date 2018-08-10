@@ -244,7 +244,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             }}
           >
             <div style={{ flex: 1 }}>
-              Hudl Levels is an extension of Snowflake, Made by{' '}
+              Hudl Levels is an extension of Snowflake, made by{' '}
               <a href="https://medium.engineering" target="_blank">
                 Medium Eng
               </a>.{' '}

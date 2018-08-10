@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Head, Main, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -17,6 +17,7 @@ export default class MyDocument extends Document {
           />
           <script src="https://s3.amazonaws.com/hudl-ui/uniform-ui-components/all/3.14.0/uniform-ui-components_vendor.js.gz" />
           <script src="https://s3.amazonaws.com/hudl-ui/uniform-ui-components/all/3.14.0/uniform-ui-components.js.gz" />
+          <meta name="viewport" content="width=device-width" />
         </Head>
         <body className="custom_class">
           <Main />

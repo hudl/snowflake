@@ -116,14 +116,14 @@ class LevelThermometer extends React.Component<Props> {
       <figure>
         <style jsx>{`
           figure {
-            margin: 0 0 0 -10px;
+            margin: 0 0 0 0;
           }
           svg {
             width: 100%;
-            height: ${height + 10}px;
+            height: ${height}px;
           }
         `}</style>
-        <svg viewBox="0 0 550 160" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 550 150" preserveAspectRatio="xMidYMid meet">
           <g transform={`translate(${margins.left},${margins.top})`}>
             {categoryPoints.map((categoryPoint, i) => {
               const x = this.pointScale(cumulativePoints);

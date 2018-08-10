@@ -32,7 +32,7 @@ class Track extends React.Component<Props> {
               }
             }
             div.track {
-              border-bottom: 2px solid #ccc;
+              border-bottom: 1px solid rgba(167, 174, 181, 0.6);
             }
             h2 {
               margin: 0 0 10px 0;
@@ -40,7 +40,7 @@ class Track extends React.Component<Props> {
             p.track-description {
               margin-top: 10px;
               padding-bottom: 20px;
-              border-bottom: 2px solid #ccc;
+              border-bottom: 1px solid rgba(167, 174, 181, 0.6);
             }
             table {
               border-spacing: 3px;
@@ -51,7 +51,7 @@ class Track extends React.Component<Props> {
               line-height: 50px;
               width: 50px;
               text-align: center;
-              background: #eee;
+              background: rgb(249, 250, 251);
               font-weight: bold;
               font-size: 24px;
               border-radius: 3px;
@@ -82,7 +82,7 @@ class Track extends React.Component<Props> {
                                 ? '#000'
                                 : isMet
                                   ? categoryColorScale(track.category)
-                                  : '#eee'
+                                  : 'rgb(249, 250, 251)'
                             }`,
                             background: isMet
                               ? categoryColorScale(track.category)
@@ -97,7 +97,7 @@ class Track extends React.Component<Props> {
               </tbody>
             </table>
             {currentMilestone ? (
-              <div className={'uni-margin--two--horiz'}>
+              <div className={'uni-margin--one--left'}>
                 <Components.Headline level="3">
                   {currentMilestone.summary}
                 </Components.Headline>

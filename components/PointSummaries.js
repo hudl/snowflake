@@ -6,9 +6,9 @@ import {
   trackIds,
   totalPointsFromMilestoneMap,
   maxLevel
-} from "../constants";
-import type { MilestoneMap } from "../constants";
-import React from "react";
+} from '../constants';
+import type { MilestoneMap } from '../constants';
+import React from 'react';
 
 type Props = {
   milestoneByTrack: MilestoneMap
@@ -31,69 +31,59 @@ class PointSummaries extends React.Component<Props> {
     while (!(nextLevel = pointsToLevels[totalPoints + pointsToNextLevel])) {
       pointsToNextLevel++;
       if (pointsToNextLevel > maxLevel) {
-        pointsToNextLevel = "N/A";
+        pointsToNextLevel = 'N/A';
         break;
       }
     }
 
     const blocks = [
       {
-        label: "Current level",
+        label: 'Current level',
         value: currentLevel
       },
       {
-        label: "Total points",
+        label: 'Total points',
         value: totalPoints
       },
       {
-        label: "Points to next level",
+        label: 'Points to next level',
         value: pointsToNextLevel
       }
     ];
 
     return (
-      <table>
-        <style jsx>{`
-          table {
-            border-spacing: 3px;
-            margin-bottom: 20px;
-            margin-left: -3px;
-            margin-top: 20px;
-            border-collapse: separate;
-          }
-          .point-summary-label {
-            font-size: 12px;
-            text-align: center;
-            font-weight: normal;
-            width: 120px;
-          }
-          .point-summary-value {
-            width: 120px;
-            background: #eee;
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 50px;
-            border-radius: 2px;
-            text-align: center;
-          }
-        `}</style>
-        <tbody>
-          <tr>
-            {blocks.map(({ label }, i) => (
-              <th key={i} className="point-summary-label">
-                {label}
-              </th>
-            ))}
-          </tr>
-          <tr>
-            {blocks.map(({ value }, i) => (
-              <td key={i} className="point-summary-value">
-                {value}
-              </td>
-            ))}
-          </tr>
-        </tbody>
-      </table>
+      <div
+        className="uni-pad--half--right uni-margin--one--vert"
+        style={{ display: 'flex', justifyContent: 'space-around' }}
+      >
+        {blocks.map(({ value, label }, i) => (
+          <div
+            className="uni-margin--half--left"
+            style={{ width: '120px' }}
+            key={value}
+          >
+            <div
+              className="uni-pad--quarter--vert"
+              style={{ fontSize: '12px', textAlign: 'center', width: '100%' }}
+            >
+              {label}
+            </div>
+            <div
+              style={{
+                background: 'rgb(249, 250, 251)',
+                textAlign: 'center',
+                width: '100%',
+                fontSize: '24px',
+                fontWeight: 'bold',
+                lineHeight: '50px',
+                borderRadius: '2px'
+              }}
+            >
+              {value}
+            </div>
+          </div>
+        ))}
+      </div>
     );
   }
 }
