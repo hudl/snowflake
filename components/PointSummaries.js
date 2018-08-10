@@ -60,7 +60,7 @@ class PointSummaries extends React.Component<Props> {
           <div
             className="uni-margin--half--left"
             style={{ width: '120px' }}
-            key={value}
+            key={label}
           >
             <div
               className="uni-pad--quarter--vert"
