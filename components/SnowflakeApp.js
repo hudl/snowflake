@@ -23,6 +23,7 @@ if (typeof window !== 'undefined') {
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
+  previewMilestoneByTrack: MilestoneMap,
   name: string,
   title: string,
   focusedTrackId: TrackId
@@ -74,22 +75,40 @@ const emptyState = (): SnowflakeAppState => {
       COMMUNICATION: 0,
       CRAFT: 0
     },
+    previewMilestoneByTrack: {
+      MOBILE: 0,
+      WEB_CLIENT: 0,
+      FOUNDATIONS: 0,
+      SERVERS: 0,
+      PROJECT_MANAGEMENT: 0,
+      COMMUNICATION: 0,
+      CRAFT: 0
+    },
     focusedTrackId: 'MOBILE'
   };
 };
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    // name: "Michael Jordan",
-    title: 'Engineer I',
+    name: '',
+    title: '',
     milestoneByTrack: {
-      MOBILE: 1,
-      WEB_CLIENT: 2,
-      FOUNDATIONS: 3,
-      SERVERS: 2,
-      PROJECT_MANAGEMENT: 4,
-      COMMUNICATION: 1,
-      CRAFT: 1
+      MOBILE: 0,
+      WEB_CLIENT: 0,
+      FOUNDATIONS: 0,
+      SERVERS: 0,
+      PROJECT_MANAGEMENT: 0,
+      COMMUNICATION: 0,
+      CRAFT: 0
+    },
+    previewMilestoneByTrack: {
+      MOBILE: 0,
+      WEB_CLIENT: 0,
+      FOUNDATIONS: 0,
+      SERVERS: 0,
+      PROJECT_MANAGEMENT: 0,
+      COMMUNICATION: 0,
+      CRAFT: 0
     },
     focusedTrackId: 'MOBILE'
   };
@@ -205,6 +224,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             <div className="chart-section">
               <NightingaleChart
                 milestoneByTrack={this.state.milestoneByTrack}
+                previewMilestoneByTrack={this.state.previewMilestoneByTrack}
                 focusedTrackId={this.state.focusedTrackId}
                 handleTrackMilestoneChangeFn={(track, milestone) =>
                   this.handleTrackMilestoneChange(track, milestone)
@@ -231,6 +251,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           />
           <Track
             milestoneByTrack={this.state.milestoneByTrack}
+            previewMilestoneByTrack={this.state.previewMilestoneByTrack}
             trackId={this.state.focusedTrackId}
             handleTrackMilestoneChangeFn={(track, milestone) =>
               this.handleTrackMilestoneChange(track, milestone)
@@ -256,12 +277,12 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   }
 
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
-    // const milestoneByTrack = this.state.milestoneByTrack;
-    // milestoneByTrack[trackId] = milestone;
-    // const titles = eligibleTitles(milestoneByTrack);
+    const previewMilestoneByTrack = this.state.previewMilestoneByTrack;
+    previewMilestoneByTrack[trackId] = milestone;
+    // const titles = eligibleTitles(previewMilestoneByTrack);
     // const title =
     //   titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title;
-    // this.setState({ milestoneByTrack, focusedTrackId: trackId, title });
+    this.setState({ previewMilestoneByTrack, focusedTrackId: trackId });
   }
 
   shiftFocusedTrack(delta: number) {
@@ -274,15 +295,19 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   setFocusedTrackId(trackId: TrackId) {
     let index = trackIds.indexOf(trackId);
     const focusedTrackId = trackIds[index];
-    this.setState({ focusedTrackId });
+    this.setState({
+      focusedTrackId
+    });
   }
 
   shiftFocusedTrackMilestoneByDelta(delta: number) {
-    // let prevMilestone = this.state.milestoneByTrack[this.state.focusedTrackId];
-    // let milestone = prevMilestone + delta;
-    // if (milestone < 0) milestone = 0;
-    // if (milestone > 5) milestone = 5;
-    // this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone);
+    let prevMilestone = this.state.previewMilestoneByTrack[
+      this.state.focusedTrackId
+    ];
+    let milestone = prevMilestone + delta;
+    if (milestone < 0) milestone = 0;
+    if (milestone > 5) milestone = 5;
+    this.handleTrackMilestoneChange(this.state.focusedTrackId, milestone);
   }
 
   setTitle(selectedTitle: object) {
@@ -290,6 +315,15 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
       this.setState({
         title: selectedTitle.label,
         milestoneByTrack: {
+          MOBILE: selectedTitle.scoredata.KNOWLEDGE,
+          WEB_CLIENT: selectedTitle.scoredata.COMMUNICATION,
+          FOUNDATIONS: selectedTitle.scoredata.GSD,
+          SERVERS: selectedTitle.scoredata.INNOVATION,
+          PROJECT_MANAGEMENT: selectedTitle.scoredata.COMPLEXITY,
+          COMMUNICATION: selectedTitle.scoredata.OWNERSHIP,
+          CRAFT: selectedTitle.scoredata.IMPACT
+        },
+        previewMilestoneByTrack: {
           MOBILE: selectedTitle.scoredata.KNOWLEDGE,
           WEB_CLIENT: selectedTitle.scoredata.COMMUNICATION,
           FOUNDATIONS: selectedTitle.scoredata.GSD,

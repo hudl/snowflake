@@ -11,6 +11,7 @@ if (typeof window !== 'undefined') {
 
 type Props = {
   milestoneByTrack: MilestoneMap,
+  previewMilestoneByTrack: MilestoneMap,
   trackId: TrackId,
   handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
 };
@@ -23,6 +24,10 @@ class Track extends React.Component<Props> {
         this.props.trackId
       ];
       const currentMilestone = track.milestones[currentMilestoneId - 1];
+      const previewMilestoneId = this.props.previewMilestoneByTrack[
+        this.props.trackId
+      ];
+      const previewMilestone = track.milestones[previewMilestoneId - 1];
       return (
         <div className="track">
           <style jsx>{`
@@ -55,6 +60,7 @@ class Track extends React.Component<Props> {
               font-weight: bold;
               font-size: 24px;
               border-radius: 3px;
+              cursor: pointer;
             }
           `}</style>
           <h2 className="track-title">{track.displayName}</h2>
@@ -78,7 +84,7 @@ class Track extends React.Component<Props> {
                           }
                           style={{
                             border: `4px solid ${
-                              milestone === currentMilestoneId
+                              milestone === previewMilestoneId
                                 ? '#000'
                                 : isMet
                                   ? categoryColorScale(track.category)
@@ -96,17 +102,17 @@ class Track extends React.Component<Props> {
                   })}
               </tbody>
             </table>
-            {currentMilestone ? (
+            {previewMilestone ? (
               <div className={'uni-margin--one--left'}>
                 <Components.Headline level="3">
-                  {currentMilestone.summary}
+                  {previewMilestone.summary}
                 </Components.Headline>
                 <Components.Subhead className={'uni-margin--half--vert'}>
                   Example behaviors:
                 </Components.Subhead>
                 <Components.Text className={'uni-margin--quarter'}>
                   <ul>
-                    {currentMilestone.signals.map((signal, i) => (
+                    {previewMilestone.signals.map((signal, i) => (
                       <li key={i}>{signal}</li>
                     ))}
                   </ul>
@@ -116,7 +122,7 @@ class Track extends React.Component<Props> {
                 </Components.Subhead>
                 <Components.Text className={'uni-margin--quarter'}>
                   <ul>
-                    {currentMilestone.examples.map((example, i) => (
+                    {previewMilestone.examples.map((example, i) => (
                       <li key={i}>{example}</li>
                     ))}
                   </ul>

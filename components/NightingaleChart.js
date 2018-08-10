@@ -10,6 +10,7 @@ const arcMilestones = milestones.slice(1); // we'll draw the '0' milestone with 
 
 type Props = {
   milestoneByTrack: MilestoneMap,
+  previewMilestoneByTrack: MilestoneMap,
   focusedTrackId: TrackId,
   handleTrackMilestoneChangeFn: (TrackId, Milestone) => void
 };
@@ -44,7 +45,7 @@ class NightingaleChart extends React.Component<Props> {
   }
 
   render() {
-    const currentMilestoneId = this.props.milestoneByTrack[
+    const previewMilestoneId = this.props.previewMilestoneByTrack[
       this.props.focusedTrackId
     ];
     return (
@@ -78,7 +79,7 @@ class NightingaleChart extends React.Component<Props> {
                 >
                   {arcMilestones.map(milestone => {
                     const isCurrentMilestone =
-                      isCurrentTrack && milestone == currentMilestoneId;
+                      isCurrentTrack && milestone == previewMilestoneId;
                     const isMet =
                       this.props.milestoneByTrack[trackId] >= milestone ||
                       milestone == 0;
@@ -114,7 +115,7 @@ class NightingaleChart extends React.Component<Props> {
                     }}
                     className={
                       'track-milestone ' +
-                      (isCurrentTrack && !currentMilestoneId
+                      (isCurrentTrack && !previewMilestoneId
                         ? 'track-milestone-current'
                         : '')
                     }
