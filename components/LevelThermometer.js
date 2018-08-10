@@ -18,7 +18,7 @@ const margins = {
   left: 10
 };
 const height = 150;
-const width = 550;
+const width = 560;
 
 type Props = {
   milestoneByTrack: MilestoneMap
@@ -123,7 +123,7 @@ class LevelThermometer extends React.Component<Props> {
             height: ${height}px;
           }
         `}</style>
-        <svg viewBox="0 0 550 150" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 560 150" preserveAspectRatio="xMidYMid meet">
           <g transform={`translate(${margins.left},${margins.top})`}>
             {categoryPoints.map((categoryPoint, i) => {
               const x = this.pointScale(cumulativePoints);
