@@ -31,11 +31,6 @@ class Track extends React.Component<Props> {
       return (
         <div className="track">
           <style jsx>{`
-            @media all and (max-width: 582px) {
-              .track-title {
-                display: none;
-              }
-            }
             div.track {
               border-bottom: 1px solid rgba(167, 174, 181, 0.6);
             }

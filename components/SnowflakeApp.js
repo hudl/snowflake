@@ -33,12 +33,15 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   if (!hash) return null;
   const result = defaultState();
   const hashValues = hash.split('#')[1].split(',');
+  console.log(hashValues);
   if (!hashValues) return null;
   trackIds.forEach((trackId, i) => {
     result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]));
+    result.previewMilestoneByTrack[trackId] = coerceMilestone(
+      Number(hashValues[i])
+    );
   });
-  if (hashValues[16]) result.name = decodeURI(hashValues[16]);
-  if (hashValues[17]) result.title = decodeURI(hashValues[17]);
+  if (hashValues[7]) result.title = decodeURI(hashValues[7]);
   return result;
 };
 
@@ -64,7 +67,6 @@ const coerceMilestone = (value: number): Milestone => {
 
 const emptyState = (): SnowflakeAppState => {
   return {
-    name: '',
     title: '',
     milestoneByTrack: {
       MOBILE: 0,
@@ -90,7 +92,6 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: '',
     title: '',
     milestoneByTrack: {
       MOBILE: 0,
@@ -118,7 +119,7 @@ const stateToHash = (state: SnowflakeAppState) => {
   if (!state || !state.milestoneByTrack) return null;
   const values = trackIds
     .map(trackId => state.milestoneByTrack[trackId])
-    .concat(encodeURI(state.name), encodeURI(state.title));
+    .concat(encodeURI(state.title));
   return values.join(',');
 };
 
@@ -151,7 +152,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           //small screens
           @media all and (min-width: 400px) {
             .main-body {
-              width: 100%;
+              width: 380px;
             }
             .title-section {
               flex-grow: 1;
@@ -268,7 +269,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
               Hudl Levels is an extension of Snowflake, made by{' '}
               <a href="https://medium.engineering" target="_blank">
                 Medium Eng
-              </a>.{' '}
+              </a>
+              .{' '}
             </div>
           </div>
         </div>
