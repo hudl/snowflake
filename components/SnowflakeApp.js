@@ -24,7 +24,6 @@ if (typeof window !== 'undefined') {
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
   previewMilestoneByTrack: MilestoneMap,
-  name: string,
   title: string,
   focusedTrackId: TrackId
 };
@@ -32,16 +31,9 @@ type SnowflakeAppState = {
 const hashToState = (hash: String): ?SnowflakeAppState => {
   if (!hash) return null;
   const result = defaultState();
-  const hashValues = hash.split('#')[1].split(',');
-  console.log(hashValues);
-  if (!hashValues) return null;
-  trackIds.forEach((trackId, i) => {
-    result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]));
-    result.previewMilestoneByTrack[trackId] = coerceMilestone(
-      Number(hashValues[i])
-    );
-  });
-  if (hashValues[7]) result.title = decodeURI(hashValues[7]);
+  const hashValue = hash.split('#')[1];
+  if (!hashValue) return null;
+  result.title = decodeURI(hashValue);
   return result;
 };
 
@@ -116,11 +108,8 @@ const defaultState = (): SnowflakeAppState => {
 };
 
 const stateToHash = (state: SnowflakeAppState) => {
-  if (!state || !state.milestoneByTrack) return null;
-  const values = trackIds
-    .map(trackId => state.milestoneByTrack[trackId])
-    .concat(encodeURI(state.title));
-  return values.join(',');
+  if (!state) return null;
+  return encodeURI(state.title);
 };
 
 type Props = {};
