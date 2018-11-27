@@ -1,7 +1,6 @@
 // @flow
 
 import React from 'react';
-import { SizeMe } from 'react-sizeme';
 import { trackIds, tracks, categoryColorScale } from '../constants';
 import type { MilestoneMap, TrackId } from '../constants';
 
