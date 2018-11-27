@@ -17,6 +17,8 @@ type Props = {
 
 class TitleSelector extends React.Component<Props> {
   render() {
+    const currentValue =
+      this.props.currentTitle !== '' ? this.props.currentTitle : null;
     if (typeof window !== 'undefined') {
       return (
         <LookupSelect
@@ -24,7 +26,7 @@ class TitleSelector extends React.Component<Props> {
           options={hudlRoles}
           id="role-select"
           onChange={this.props.setTitleFn}
-          value={this.props.currentTitle}
+          value={currentValue}
           showAllOptions
         />
       );

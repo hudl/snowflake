@@ -335,6 +335,8 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           CRAFT: selectedTitle.scoredata.IMPACT
         }
       });
+    } else {
+      this.setState(emptyState);
     }
   }
 }
