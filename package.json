@@ -6,7 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "d3": "^4.11.0",
-    "hudl-uniform-ui-css": "^1.11.0",
+    "hudl-uniform-ui-css": "^1.11.3",
     "next": "3.2.3",
     "react": "15.6.1",
     "react-dom": "15.6.1",
