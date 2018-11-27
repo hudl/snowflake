@@ -359,7 +359,7 @@ export const tracks: Tracks = {
         ],
         examples: [
           'Leading strategy sessions for area of ownership',
-          'Identifying key metrics and measuring pogress towards goals',
+          'Identifying key metrics and measuring progress towards goals',
           "Bringing roadblocks to leadership's attention"
         ]
       },
