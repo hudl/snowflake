@@ -82,8 +82,8 @@ class Track extends React.Component<Props> {
                               milestone === previewMilestoneId
                                 ? '#000'
                                 : isMet
-                                  ? categoryColorScale(track.category)
-                                  : 'rgb(249, 250, 251)'
+                                ? categoryColorScale(track.category)
+                                : 'rgb(249, 250, 251)'
                             }`,
                             background: isMet
                               ? categoryColorScale(track.category)
@@ -105,23 +105,23 @@ class Track extends React.Component<Props> {
                 <Components.Subhead className={'uni-margin--half--vert'}>
                   Example behaviors:
                 </Components.Subhead>
-                <Components.Text className={'uni-margin--quarter'}>
-                  <ul>
-                    {previewMilestone.signals.map((signal, i) => (
-                      <li key={i}>{signal}</li>
-                    ))}
-                  </ul>
-                </Components.Text>
+                <ul>
+                  {previewMilestone.signals.map((signal, i) => (
+                    <Components.Text className={'uni-margin--quarter'} key={i}>
+                      <li>{signal}</li>
+                    </Components.Text>
+                  ))}
+                </ul>
                 <Components.Subhead className={'uni-margin--half--vert'}>
                   Example tasks:
                 </Components.Subhead>
-                <Components.Text className={'uni-margin--quarter'}>
-                  <ul>
-                    {previewMilestone.examples.map((example, i) => (
-                      <li key={i}>{example}</li>
-                    ))}
-                  </ul>
-                </Components.Text>
+                <ul>
+                  {previewMilestone.examples.map((example, i) => (
+                    <Components.Text className={'uni-margin--quarter'} key={i}>
+                      <li>{example}</li>
+                    </Components.Text>
+                  ))}
+                </ul>
               </div>
             ) : null}
           </div>
