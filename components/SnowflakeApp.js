@@ -9,7 +9,8 @@ import {
   eligibleTitles,
   trackIds,
   milestones,
-  milestoneToPoints
+  milestoneToPoints,
+  hudlRoles
 } from '../constants';
 import PointSummaries from '../components/PointSummaries';
 import type { Milestone, MilestoneMap, TrackId } from '../constants';
@@ -34,6 +35,30 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   const hashValue = hash.split('#')[1];
   if (!hashValue) return null;
   result.title = decodeURI(hashValue);
+  Object.entries(hudlRoles).forEach(([key, value]) => {
+    value['options']
+      .filter(role => role.value === result.title)
+      .forEach(role => {
+        result.milestoneByTrack = {
+          MOBILE: role.scoredata.KNOWLEDGE,
+          WEB_CLIENT: role.scoredata.COMMUNICATION,
+          FOUNDATIONS: role.scoredata.GSD,
+          SERVERS: role.scoredata.INNOVATION,
+          PROJECT_MANAGEMENT: role.scoredata.COMPLEXITY,
+          COMMUNICATION: role.scoredata.OWNERSHIP,
+          CRAFT: role.scoredata.IMPACT
+        };
+        result.previewMilestoneByTrack = {
+          MOBILE: role.scoredata.KNOWLEDGE,
+          WEB_CLIENT: role.scoredata.COMMUNICATION,
+          FOUNDATIONS: role.scoredata.GSD,
+          SERVERS: role.scoredata.INNOVATION,
+          PROJECT_MANAGEMENT: role.scoredata.COMPLEXITY,
+          COMMUNICATION: role.scoredata.OWNERSHIP,
+          CRAFT: role.scoredata.IMPACT
+        };
+      });
+  });
   return result;
 };
 
@@ -122,7 +147,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
 
   componentDidUpdate() {
     const hash = stateToHash(this.state);
-    if (hash) window.location.replace(`#${hash}`);
+    window.location.replace(`#${hash}`);
   }
 
   componentDidMount() {
