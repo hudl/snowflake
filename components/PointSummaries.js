@@ -53,15 +53,11 @@ class PointSummaries extends React.Component<Props> {
 
     return (
       <div
-        className="uni-pad--half--right uni-margin--one--vert"
+        className="uni-margin--one--vert"
         style={{ display: 'flex', justifyContent: 'space-around' }}
       >
         {blocks.map(({ value, label }, i) => (
-          <div
-            className="uni-margin--half--left"
-            style={{ width: '120px' }}
-            key={label}
-          >
+          <div style={{ width: '120px' }} key={label}>
             <div
               className="uni-pad--quarter--vert"
               style={{ fontSize: '12px', textAlign: 'center', width: '100%' }}

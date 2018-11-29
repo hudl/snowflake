@@ -166,7 +166,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           //small screens
           @media all and (min-width: 400px) {
             .main-body {
-              width: 380px;
+              width: 370px;
             }
             .title-section {
               flex-grow: 1;
@@ -179,6 +179,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           @media all and (min-width: 700px) {
             .main-body {
               width: 100%;
+              margin: 0 1rem;
               max-width: 800px;
             }
             .title-section {
@@ -193,6 +194,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           @media all and (min-width: 960px) {
             .main-body {
               width: 100%;
+              margin: 0 1rem;
               max-width: 960px;
             }
             .title-section {
@@ -204,7 +206,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
             }
           }
         `}</style>
-        <div className="uni-margin--one--horiz main-body">
+        <div className="main-body">
           <div style={{ textAlign: 'center' }}>
             <a href="https://hudl.com/" target="_blank">
               {typeof window !== 'undefined' && (

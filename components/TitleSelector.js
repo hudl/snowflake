@@ -44,7 +44,9 @@ class TitleSelector extends React.Component<Props> {
               showAllOptions
             />
           </div>
-          {currentValue !== null && (
+          <div
+            style={{ visibility: currentValue === null ? 'hidden' : 'visible' }}
+          >
             <Tooltip
               position="bottom"
               text="Find Hudlies with this title"
@@ -64,7 +66,7 @@ class TitleSelector extends React.Component<Props> {
                 />
               </Link>
             </Tooltip>
-          )}
+          </div>
         </div>
       );
     }
