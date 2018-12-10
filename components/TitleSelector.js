@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { hudlRoles } from '../constants';
+import { hudlRoles } from '../roles';
 import type { MilestoneMap } from '../constants';
 
 let LookupSelect = undefined;
@@ -25,6 +25,46 @@ class TitleSelector extends React.Component<Props> {
   render() {
     const currentValue =
       this.props.currentTitle !== '' ? this.props.currentTitle : null;
+    let options = {};
+    hudlRoles
+      .sort((roleA, roleB) => {
+        if (roleA.department.toLowerCase() === roleB.department.toLowerCase()) {
+          if (roleA.score === roleB.score) {
+            if (roleA.title.toLowerCase() < roleB.title.toLowerCase())
+              return -1;
+            if (roleA.title.toLowerCase() > roleB.title.toLowerCase()) return 1;
+            return 0;
+          } else {
+            return roleA.score - roleB.score;
+          }
+        } else {
+          if (roleA.department.toLowerCase() < roleB.department.toLowerCase())
+            return -1;
+          if (roleA.department.toLowerCase() > roleB.department.toLowerCase())
+            return 1;
+          return 0;
+        }
+      })
+      .forEach(role => {
+        if (!(role.department in options)) {
+          //the department hasn't been added to the options object
+          options[role.department] = { label: role.department, options: [] };
+        }
+        options[role.department].options.push({
+          label: role.title,
+          value: role.title,
+          scoredata: {
+            Score: role.score,
+            KNOWLEDGE: role.knowledge,
+            COMMUNICATION: role.communication,
+            GSD: role.gsd,
+            INNOVATION: role.innovation,
+            COMPLEXITY: role.complexity,
+            OWNERSHIP: role.ownership,
+            IMPACT: role.impact
+          }
+        });
+      });
     if (typeof window !== 'undefined') {
       return (
         <div
@@ -37,11 +77,12 @@ class TitleSelector extends React.Component<Props> {
           <div style={{ flexGrow: 1 }}>
             <LookupSelect
               placeholder="Find a role"
-              options={hudlRoles}
+              options={options}
               id="role-select"
               onChange={this.props.setTitleFn}
               value={currentValue}
               showAllOptions
+              maxHeight="300px"
             />
           </div>
           <div

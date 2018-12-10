@@ -9,9 +9,9 @@ import {
   eligibleTitles,
   trackIds,
   milestones,
-  milestoneToPoints,
-  hudlRoles
+  milestoneToPoints
 } from '../constants';
+import { hudlRoles } from '../roles';
 import PointSummaries from '../components/PointSummaries';
 import type { Milestone, MilestoneMap, TrackId } from '../constants';
 import React from 'react';
@@ -35,30 +35,27 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   const hashValue = hash.split('#')[1];
   if (!hashValue) return null;
   result.title = decodeURI(hashValue);
-  Object.entries(hudlRoles).forEach(([key, value]) => {
-    value['options']
-      .filter(role => role.value === result.title)
-      .forEach(role => {
-        result.milestoneByTrack = {
-          MOBILE: role.scoredata.KNOWLEDGE,
-          WEB_CLIENT: role.scoredata.COMMUNICATION,
-          FOUNDATIONS: role.scoredata.GSD,
-          SERVERS: role.scoredata.INNOVATION,
-          PROJECT_MANAGEMENT: role.scoredata.COMPLEXITY,
-          COMMUNICATION: role.scoredata.OWNERSHIP,
-          CRAFT: role.scoredata.IMPACT
-        };
-        result.previewMilestoneByTrack = {
-          MOBILE: role.scoredata.KNOWLEDGE,
-          WEB_CLIENT: role.scoredata.COMMUNICATION,
-          FOUNDATIONS: role.scoredata.GSD,
-          SERVERS: role.scoredata.INNOVATION,
-          PROJECT_MANAGEMENT: role.scoredata.COMPLEXITY,
-          COMMUNICATION: role.scoredata.OWNERSHIP,
-          CRAFT: role.scoredata.IMPACT
-        };
-      });
+  const roleToLoad = hudlRoles.find(role => {
+    return role.title === result.title;
   });
+  result.milestoneByTrack = {
+    MOBILE: roleToLoad.knowledge,
+    WEB_CLIENT: roleToLoad.communication,
+    FOUNDATIONS: roleToLoad.gsd,
+    SERVERS: roleToLoad.innovation,
+    PROJECT_MANAGEMENT: roleToLoad.complexity,
+    COMMUNICATION: roleToLoad.ownership,
+    CRAFT: roleToLoad.impact
+  };
+  result.previewMilestoneByTrack = {
+    MOBILE: roleToLoad.knowledge,
+    WEB_CLIENT: roleToLoad.communication,
+    FOUNDATIONS: roleToLoad.gsd,
+    SERVERS: roleToLoad.innovation,
+    PROJECT_MANAGEMENT: roleToLoad.complexity,
+    COMMUNICATION: roleToLoad.ownership,
+    CRAFT: roleToLoad.impact
+  };
   return result;
 };
 
