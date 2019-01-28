@@ -292,7 +292,8 @@ export const tracks: Tracks = {
     description: 'GSD factor. How and what needs to get done.',
     milestones: [
       {
-        summary: 'Tasks are identified and laid out in advance.',
+        summary:
+          'Tasks are identified and laid out in advance, and are simple in nature.',
         signals: ["Completes tasks as they've been assigned"],
         examples: [
           'Scheduling meetings',
@@ -442,7 +443,7 @@ export const tracks: Tracks = {
       },
       {
         summary:
-          'Thinking within multiple, substantially different areas and precedents, where innovation is required.',
+          'Thinking within more than one substantially different area and precedents, where innovation is required.',
         signals: [
           'Draws connections between seemingly unconnected issues',
           'Applies innovation and creativity to identify solutions to problems previously not encountered',
@@ -456,7 +457,7 @@ export const tracks: Tracks = {
       },
       {
         summary:
-          'Thinking within a defined area and/or objectives (i.e. functional area, tribe or bet), where innovation is required (more than 50% of the role).',
+          'Thinking within a broad area and/or objectives (i.e. functional area, tribe or bet), where innovation is required (more than 50% of the role).',
         signals: [
           'Applies innovative thinking to novel problems that impact a defined area or objectives that have already been laid out',
           'Uses open-ended questions to understand the problems',
@@ -685,7 +686,7 @@ export const tracks: Tracks = {
       },
       {
         summary:
-          'Subject only to overall guidance on broad organizational objectives.',
+          'Subject only to overall guidance on broad organizational objectives and collection of strategic policy.',
         signals: [
           'Reviews results with Sr. Leadership',
           'Makes decisions autonomously, with insight from Sr. Leadership'
@@ -737,7 +738,7 @@ export const tracks: Tracks = {
       },
       {
         summary:
-          'Partnership with other roles/functions. OR - impact that reaches one department/business unit.',
+          'Partnership and common responsibilties with other roles/functions AND impact that reaches one department/business unit.',
         signals: [
           "Clearly articulates connection of work to Hudl's mission/vision",
           'Works collaboratively to deliver value with other Hudlies',
@@ -752,7 +753,7 @@ export const tracks: Tracks = {
       },
       {
         summary:
-          'Works collaboratively to define direction focused on achieving critical business impact. OR - impact that is inter-departmental/multiple business units.',
+          'Works collaboratively to define direction focused on achieving critical business impact AND impact that is inter-departmental/multiple business units.',
         signals: [
           'Uses judgment to prioritize most impactful work',
           'Demonstrates insight to define direction that delivers critical business impact for Hudl',
@@ -766,7 +767,8 @@ export const tracks: Tracks = {
         ]
       },
       {
-        summary: 'Sets vision/direction that achieves critical business impact',
+        summary:
+          'Defines/sets direction for others to achieve critical business impact (ie. mountain goals, Hudl-wide strategic initiatives)',
         signals: [
           'Uses expertise to identify areas that achieve critical business impact',
           'Demonstrates accountability in delivering results'
@@ -779,7 +781,7 @@ export const tracks: Tracks = {
       },
       {
         summary:
-          'Defines/sets direction for others to achieve critical business impact.',
+          'Impact of decisions are felt throughout the majority of Hudl and impact the majority of Hudlies (more than 50%).',
         signals: [
           'Uses expertise to identify areas of focus for others to achieve critical business impact',
           'Demonstrates accountability in delivering results- self and through others'
@@ -791,7 +793,7 @@ export const tracks: Tracks = {
       },
       {
         summary:
-          'Impact of decisions are felt throughout most of Hudl and affect the majority of Hudlies (more than 50%).',
+          'Impact of decisions are felt throughout all of Hudl and impact all Hudlies.',
         signals: [
           "Delivers value that improves Hudl's strategic position",
           'Provides insight and work that helps Hudl achieve critical business goals',
@@ -803,18 +805,9 @@ export const tracks: Tracks = {
         ]
       },
       {
-        summary:
-          'Impact of decisions are felt throughout all of Hudl and affect all Hudlies.',
-        signals: [
-          'Delivers value that disrupts the industry',
-          "Demonstrates courage in identifying ideas that will ensure Hudl's success",
-          "Connects work to Hudl's future priorities"
-        ],
-        examples: [
-          'Identifying future strategy',
-          'Setting vision for all of Hudl',
-          'Providing direction that delivers on future vision'
-        ]
+        summary: '',
+        signals: [],
+        examples: []
       }
     ]
   }
