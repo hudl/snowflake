@@ -11,7 +11,7 @@ import {
   milestones,
   milestoneToPoints
 } from '../constants';
-import { hudlRoles } from '../roles';
+import roles from '../roles';
 import PointSummaries from '../components/PointSummaries';
 import type { Milestone, MilestoneMap, TrackId } from '../constants';
 import React from 'react';
@@ -35,7 +35,7 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   const hashValue = hash.split('#')[1];
   if (!hashValue) return null;
   result.title = decodeURI(hashValue);
-  const roleToLoad = hudlRoles.find(role => {
+  const roleToLoad = roles.hudlRoles.find(role => {
     return role.title === result.title;
   });
   result.milestoneByTrack = {

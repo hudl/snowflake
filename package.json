@@ -5,6 +5,7 @@
   "repository": "https://github.com/Medium/eng-growth",
   "license": "MIT",
   "dependencies": {
+    "csvtojson": "^2.0.8",
     "d3": "^4.11.0",
     "hudl-uniform-ui-css": "^1.11.3",
     "next": "3.2.3",
@@ -15,7 +16,8 @@
   "scripts": {
     "dev": "next",
     "export": "next build && next export",
-    "flow": "flow"
+    "flow": "flow",
+    "parse": "node parser.js"
   },
   "devDependencies": {
     "flow-bin": "^0.57.2"

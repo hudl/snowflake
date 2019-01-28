@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { hudlRoles } from '../roles';
+import roles from '../roles';
 import type { MilestoneMap } from '../constants';
 
 let LookupSelect = undefined;
@@ -26,7 +26,7 @@ class TitleSelector extends React.Component<Props> {
     const currentValue =
       this.props.currentTitle !== '' ? this.props.currentTitle : null;
     let options = {};
-    hudlRoles
+    roles.hudlRoles
       .sort((roleA, roleB) => {
         if (roleA.department.toLowerCase() === roleB.department.toLowerCase()) {
           if (roleA.score === roleB.score) {
