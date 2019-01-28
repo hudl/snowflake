@@ -1,19 +1,6 @@
 export const hudlRoles = [
   {
     department: 'Marketing Ops',
-    title: 'Marketing Technology Specialist',
-    knowledge: '',
-    communication: '',
-    gsd: '',
-    innovation: '',
-    complexity: '',
-    ownership: '',
-    impact: '',
-    score: '',
-    level: 3
-  },
-  {
-    department: 'Marketing Ops',
     title: 'Project Manager',
     knowledge: 3,
     communication: 5,
@@ -27,7 +14,7 @@ export const hudlRoles = [
   },
   {
     department: 'Corporate Operations',
-    title: 'Sr. Specialst, Internal Operations',
+    title: 'Sr. Specialst, Corporate Operations',
     knowledge: 3,
     communication: 5,
     gsd: 3,
@@ -183,7 +170,7 @@ export const hudlRoles = [
   },
   {
     department: 'Customer Success',
-    title: 'Account Management Specialist',
+    title: 'Customer Success Specialist',
     knowledge: 3,
     communication: 4,
     gsd: 3,
@@ -196,20 +183,7 @@ export const hudlRoles = [
   },
   {
     department: 'Customer Success',
-    title: 'Account Manager',
-    knowledge: 4,
-    communication: 5,
-    gsd: 4,
-    innovation: 3,
-    complexity: 4,
-    ownership: 4,
-    impact: 3,
-    score: 30,
-    level: 4
-  },
-  {
-    department: 'Customer Success',
-    title: 'Sr. Account Management Manager',
+    title: 'Sr. Manager, Customer Success',
     knowledge: 5,
     communication: 6,
     gsd: 5,
@@ -222,7 +196,20 @@ export const hudlRoles = [
   },
   {
     department: 'Customer Success',
-    title: 'Customer Engagement Manager',
+    title: 'Sr. Manager, Elite Customer Success',
+    knowledge: 5,
+    communication: 6,
+    gsd: 5,
+    innovation: 5,
+    complexity: 4,
+    ownership: 5,
+    impact: 4,
+    score: 38,
+    level: 6
+  },
+  {
+    department: 'Customer Success',
+    title: 'Elite Customer Success Manager',
     knowledge: 4,
     communication: 5,
     gsd: 4,
@@ -232,6 +219,45 @@ export const hudlRoles = [
     impact: 4,
     score: 33,
     level: 4
+  },
+  {
+    department: 'Customer Success',
+    title: 'Customer Success Manager',
+    knowledge: 4,
+    communication: 5,
+    gsd: 4,
+    innovation: 4,
+    complexity: 4,
+    ownership: 4,
+    impact: 4,
+    score: 33,
+    level: 4
+  },
+  {
+    department: 'Customer Success',
+    title: 'Manager of Elite Customer Success',
+    knowledge: 5,
+    communication: 5,
+    gsd: 5,
+    innovation: 4,
+    complexity: 4,
+    ownership: 5,
+    impact: 4,
+    score: 36,
+    level: 5
+  },
+  {
+    department: 'Customer Success',
+    title: 'Manager of Customer Success',
+    knowledge: 5,
+    communication: 5,
+    gsd: 5,
+    innovation: 4,
+    complexity: 4,
+    ownership: 5,
+    impact: 4,
+    score: 36,
+    level: 5
   },
   {
     department: 'Customer Success',
@@ -248,7 +274,7 @@ export const hudlRoles = [
   },
   {
     department: 'Decision Science',
-    title: 'Reporting Analyst',
+    title: 'Data Analyst',
     knowledge: 4,
     communication: 4,
     gsd: 4,
@@ -261,7 +287,20 @@ export const hudlRoles = [
   },
   {
     department: 'Decision Science',
-    title: 'Senior Reporting Analyst',
+    title: 'Support Technical Analyst',
+    knowledge: 4,
+    communication: 4,
+    gsd: 4,
+    innovation: 4,
+    complexity: 5,
+    ownership: 4,
+    impact: 3,
+    score: 31,
+    level: 4
+  },
+  {
+    department: 'Decision Science',
+    title: 'Sr. Data Analyst',
     knowledge: 5,
     communication: 5,
     gsd: 5,
@@ -274,55 +313,16 @@ export const hudlRoles = [
   },
   {
     department: 'Decision Science',
-    title: 'Lead Reporting Analyst',
-    knowledge: 6,
-    communication: 6,
-    gsd: 5,
-    innovation: 5,
-    complexity: 5,
-    ownership: 5,
-    impact: 5,
-    score: 42,
-    level: 6
-  },
-  {
-    department: 'Decision Science',
-    title: 'Lead Predictive Analyst',
+    title: 'Sr. Predictive Analyst',
     knowledge: 5,
-    communication: 6,
+    communication: 5,
     gsd: 5,
     innovation: 4,
     complexity: 5,
     ownership: 5,
     impact: 4,
-    score: 38,
-    level: 6
-  },
-  {
-    department: 'Decision Science',
-    title: 'Director Predictive Analytics',
-    knowledge: 6,
-    communication: 6,
-    gsd: 5,
-    innovation: 5,
-    complexity: 6,
-    ownership: 5,
-    impact: 5,
-    score: 43,
-    level: 7
-  },
-  {
-    department: 'Decision Science',
-    title: 'Analytics Director',
-    knowledge: 6,
-    communication: 6,
-    gsd: 6,
-    innovation: 5,
-    complexity: 6,
-    ownership: 6,
-    impact: 5,
-    score: 45,
-    level: 7
+    score: 37,
+    level: 5
   },
   {
     department: 'Decision Science',
@@ -349,6 +349,32 @@ export const hudlRoles = [
     impact: 3,
     score: 36,
     level: 5
+  },
+  {
+    department: 'Decision Science',
+    title: 'Data Analytics Manager',
+    knowledge: 5,
+    communication: 5,
+    gsd: 5,
+    innovation: 4,
+    complexity: 5,
+    ownership: 5,
+    impact: 4,
+    score: 37,
+    level: 5
+  },
+  {
+    department: 'Decision Science',
+    title: 'Director, Data Analytics',
+    knowledge: 6,
+    communication: 6,
+    gsd: 6,
+    innovation: 5,
+    complexity: 6,
+    ownership: 6,
+    impact: 5,
+    score: 45,
+    level: 7
   },
   {
     department: 'Decision Science',
@@ -456,7 +482,7 @@ export const hudlRoles = [
   },
   {
     department: 'Engineering',
-    title: 'Senior Engineering Manager',
+    title: 'Sr. Manager, Engineering',
     knowledge: 5,
     communication: 6,
     gsd: 5,
@@ -469,7 +495,7 @@ export const hudlRoles = [
   },
   {
     department: 'Engineering',
-    title: 'Senior Data Scientist Manager',
+    title: 'Sr. Manager, Data Scientist',
     knowledge: 5,
     communication: 6,
     gsd: 5,
@@ -482,7 +508,7 @@ export const hudlRoles = [
   },
   {
     department: 'Engineering',
-    title: 'Engineering Director',
+    title: 'Director, Engineering',
     knowledge: 6,
     communication: 6,
     gsd: 6,
@@ -495,7 +521,7 @@ export const hudlRoles = [
   },
   {
     department: 'Engineering',
-    title: 'VP - Engineering',
+    title: 'VP, Engineering',
     knowledge: 7,
     communication: 6,
     gsd: 6,
@@ -521,7 +547,7 @@ export const hudlRoles = [
   },
   {
     department: 'Facilities',
-    title: 'Sr. Facilities Specialist',
+    title: 'Sr. Specialist, Facilities',
     knowledge: 3,
     communication: 4,
     gsd: 4,
@@ -530,19 +556,6 @@ export const hudlRoles = [
     ownership: 4,
     impact: 4,
     score: 31,
-    level: 4
-  },
-  {
-    department: 'Facilities',
-    title: 'Office Manager',
-    knowledge: 4,
-    communication: 5,
-    gsd: 4,
-    innovation: 4,
-    complexity: 4,
-    ownership: 4,
-    impact: 4,
-    score: 33,
     level: 4
   },
   {
@@ -573,7 +586,7 @@ export const hudlRoles = [
   },
   {
     department: 'Facilities',
-    title: 'Sr. Facilities Design Manager',
+    title: 'Sr. Manager, Facilities Design',
     knowledge: 6,
     communication: 5,
     gsd: 5,
@@ -820,7 +833,7 @@ export const hudlRoles = [
   },
   {
     department: 'Hardware',
-    title: 'Sr. Hardware Operations Manager',
+    title: 'Director, Hardware',
     knowledge: 6,
     communication: 6,
     gsd: 5,
@@ -833,7 +846,7 @@ export const hudlRoles = [
   },
   {
     department: 'Hardware',
-    title: 'Camera Hardware Lead',
+    title: 'Sr. Manager, Hardware Operations',
     knowledge: 6,
     communication: 5,
     gsd: 6,
@@ -846,7 +859,7 @@ export const hudlRoles = [
   },
   {
     department: 'Hardware',
-    title: 'Supply Chain Coordinator',
+    title: 'Supply Chain Specialist',
     knowledge: 4,
     communication: 4,
     gsd: 3,
@@ -859,7 +872,7 @@ export const hudlRoles = [
   },
   {
     department: 'Hardware',
-    title: 'Operations Project Manager',
+    title: 'Hardware Project Manager',
     knowledge: 4,
     communication: 5,
     gsd: 4,
@@ -872,7 +885,7 @@ export const hudlRoles = [
   },
   {
     department: 'Hardware',
-    title: 'VP - Hardware',
+    title: 'VP, Hardware',
     knowledge: 6,
     communication: 7,
     gsd: 6,
@@ -923,32 +936,6 @@ export const hudlRoles = [
     level: 6
   },
   {
-    department: 'IT',
-    title: 'IT Director',
-    knowledge: 6,
-    communication: 6,
-    gsd: 5,
-    innovation: 5,
-    complexity: 6,
-    ownership: 6,
-    impact: 6,
-    score: 46,
-    level: 7
-  },
-  {
-    department: 'Legal',
-    title: 'EVP of Legal',
-    knowledge: 7,
-    communication: 8,
-    gsd: 7,
-    innovation: 6,
-    complexity: 6,
-    ownership: 6,
-    impact: 7,
-    score: 54,
-    level: 10
-  },
-  {
     department: 'Legal',
     title: 'Deputy General Counsel',
     knowledge: 6,
@@ -960,19 +947,6 @@ export const hudlRoles = [
     impact: 5,
     score: 46,
     level: 7
-  },
-  {
-    department: 'Legal',
-    title: 'Lead Legal Counsel',
-    knowledge: 5,
-    communication: 5,
-    gsd: 5,
-    innovation: 5,
-    complexity: 6,
-    ownership: 4,
-    impact: 4,
-    score: 38,
-    level: 6
   },
   {
     department: 'Legal',
@@ -1249,7 +1223,7 @@ export const hudlRoles = [
   },
   {
     department: 'Business Operations',
-    title: 'VP - Market (Elite/Competitive)',
+    title: 'VP, Market (Elite/Competitive)',
     knowledge: 6,
     communication: 8,
     gsd: 6,
@@ -1262,7 +1236,7 @@ export const hudlRoles = [
   },
   {
     department: 'Marketing Ops',
-    title: 'VP Marketing',
+    title: 'VP, Marketing',
     knowledge: 6,
     communication: 7,
     gsd: 7,
@@ -1275,7 +1249,7 @@ export const hudlRoles = [
   },
   {
     department: 'Media',
-    title: 'Sr. Programming Manager',
+    title: 'Sr. Manager, Programming',
     knowledge: 5,
     communication: 6,
     gsd: 5,
@@ -1301,7 +1275,7 @@ export const hudlRoles = [
   },
   {
     department: 'Media',
-    title: 'Sr. Video Production Manager',
+    title: 'Sr. Manager, Video Production',
     knowledge: 5,
     communication: 6,
     gsd: 5,
@@ -1314,7 +1288,7 @@ export const hudlRoles = [
   },
   {
     department: 'Media',
-    title: 'Media Operations Mgr',
+    title: 'Media Operations Manager',
     knowledge: 4,
     communication: 5,
     gsd: 5,
@@ -1340,7 +1314,7 @@ export const hudlRoles = [
   },
   {
     department: 'Media',
-    title: 'Sr. Media Operations Specialist',
+    title: 'Media Services Partner',
     knowledge: 5,
     communication: 4,
     gsd: 4,
@@ -1353,7 +1327,20 @@ export const hudlRoles = [
   },
   {
     department: 'Media',
-    title: 'Sr. Video Production Specialist',
+    title: 'Video Producer',
+    knowledge: 4,
+    communication: 4,
+    gsd: 4,
+    innovation: 4,
+    complexity: 4,
+    ownership: 3,
+    impact: 3,
+    score: 29,
+    level: 4
+  },
+  {
+    department: 'Media',
+    title: 'Story Producer',
     knowledge: 4,
     communication: 4,
     gsd: 4,
@@ -1379,7 +1366,7 @@ export const hudlRoles = [
   },
   {
     department: 'Media',
-    title: 'Sr. Social Media Specialist',
+    title: 'Sr. Specialist, Social Media',
     knowledge: 4,
     communication: 5,
     gsd: 4,
@@ -1392,7 +1379,7 @@ export const hudlRoles = [
   },
   {
     department: 'Operations',
-    title: 'VP - Assist Operations',
+    title: 'VP, Operations',
     knowledge: 6,
     communication: 7,
     gsd: 7,
@@ -1405,7 +1392,20 @@ export const hudlRoles = [
   },
   {
     department: 'Operations',
-    title: 'Assist Operations Specialist',
+    title: 'VP, Assist Operations',
+    knowledge: 6,
+    communication: 7,
+    gsd: 7,
+    innovation: 6,
+    complexity: 6,
+    ownership: 6,
+    impact: 6,
+    score: 50,
+    level: 9
+  },
+  {
+    department: 'Operations',
+    title: 'Operations Specialist',
     knowledge: 3,
     communication: 4,
     gsd: 3,
@@ -1444,7 +1444,7 @@ export const hudlRoles = [
   },
   {
     department: 'Operations',
-    title: 'Sr. Site Manager',
+    title: 'Sr. Manager, Operations',
     knowledge: 5,
     communication: 6,
     gsd: 5,
@@ -1457,7 +1457,7 @@ export const hudlRoles = [
   },
   {
     department: 'Operations',
-    title: 'Operations Project Manager',
+    title: 'Elite Operations Manager',
     knowledge: 3,
     communication: 6,
     gsd: 4,
@@ -1470,7 +1470,7 @@ export const hudlRoles = [
   },
   {
     department: 'Operations',
-    title: 'Production Manager',
+    title: 'Sr. Specialist, Production',
     knowledge: 4,
     communication: 5,
     gsd: 4,
@@ -1482,7 +1482,7 @@ export const hudlRoles = [
     level: 4
   },
   {
-    department: 'Operations',
+    department: 'Business Operations',
     title: 'Lead Systems Analyst',
     knowledge: 4,
     communication: 5,
@@ -1495,21 +1495,8 @@ export const hudlRoles = [
     level: 6
   },
   {
-    department: 'Operations',
-    title: 'VP - Operations',
-    knowledge: 6,
-    communication: 7,
-    gsd: 7,
-    innovation: 6,
-    complexity: 6,
-    ownership: 6,
-    impact: 6,
-    score: 50,
-    level: 9
-  },
-  {
     department: 'People Ops',
-    title: 'Talent Acquisition Director',
+    title: 'Director, Talent Acquisition',
     knowledge: 6,
     communication: 6,
     gsd: 5,
@@ -1522,7 +1509,7 @@ export const hudlRoles = [
   },
   {
     department: 'People Ops',
-    title: 'Learning & Development Director',
+    title: 'Director, Learning & Development',
     knowledge: 6,
     communication: 6,
     gsd: 5,
@@ -1535,7 +1522,7 @@ export const hudlRoles = [
   },
   {
     department: 'People Ops',
-    title: 'Talent & Culture Director',
+    title: 'Director, Talent & Culture',
     knowledge: 6,
     communication: 6,
     gsd: 5,
@@ -1703,32 +1690,6 @@ export const hudlRoles = [
     level: 3
   },
   {
-    department: 'People Ops',
-    title: 'People Ops Dir',
-    knowledge: 7,
-    communication: 7,
-    gsd: 7,
-    innovation: 7,
-    complexity: 6,
-    ownership: 6,
-    impact: 7,
-    score: 54,
-    level: 10
-  },
-  {
-    department: 'Product',
-    title: 'Sr Product Director (Tribe Lead)',
-    knowledge: 6,
-    communication: 7,
-    gsd: 6,
-    innovation: 6,
-    complexity: 6,
-    ownership: 6,
-    impact: 5,
-    score: 47,
-    level: 8
-  },
-  {
     department: 'Product Design',
     title: 'Product Designer',
     knowledge: 5,
@@ -1795,7 +1756,7 @@ export const hudlRoles = [
   },
   {
     department: 'Product Design',
-    title: 'Design Director',
+    title: 'Director, Design',
     knowledge: 6,
     communication: 6,
     gsd: 6,
@@ -1808,7 +1769,7 @@ export const hudlRoles = [
   },
   {
     department: 'Product Design',
-    title: 'VP - Design',
+    title: 'VP, Design',
     knowledge: 7,
     communication: 7,
     gsd: 6,
@@ -1834,7 +1795,7 @@ export const hudlRoles = [
   },
   {
     department: 'Product Design',
-    title: 'Assoc. Ind. Designer',
+    title: 'Industrial Design Specialist',
     knowledge: 4,
     communication: 3,
     gsd: 3,
@@ -1847,7 +1808,7 @@ export const hudlRoles = [
   },
   {
     department: 'Product Design',
-    title: 'Sr. Info Architect',
+    title: 'Sr. Information Architect',
     knowledge: 5,
     communication: 6,
     gsd: 5,
@@ -1872,7 +1833,7 @@ export const hudlRoles = [
     level: 4
   },
   {
-    department: 'Product Managers',
+    department: 'Product',
     title: 'Product Manager',
     knowledge: 4,
     communication: 4,
@@ -1885,7 +1846,7 @@ export const hudlRoles = [
     level: 4
   },
   {
-    department: 'Product Managers',
+    department: 'Product',
     title: 'Sr. Product Manager',
     knowledge: 5,
     communication: 5,
@@ -1898,7 +1859,7 @@ export const hudlRoles = [
     level: 5
   },
   {
-    department: 'Product Managers',
+    department: 'Product',
     title: 'Sr. PM Manager',
     knowledge: 6,
     communication: 6,
@@ -1911,7 +1872,20 @@ export const hudlRoles = [
     level: 6
   },
   {
-    department: 'Product Managers',
+    department: 'Product',
+    title: 'Sr. PM Manager',
+    knowledge: 6,
+    communication: 6,
+    gsd: 5,
+    innovation: 5,
+    complexity: 5,
+    ownership: 6,
+    impact: 4,
+    score: 41,
+    level: 6
+  },
+  {
+    department: 'Product',
     title: 'PM Director',
     knowledge: 6,
     communication: 6,
@@ -1924,7 +1898,20 @@ export const hudlRoles = [
     level: 7
   },
   {
-    department: 'Product Managers',
+    department: 'Product',
+    title: 'Product Directors',
+    knowledge: 6,
+    communication: 6,
+    gsd: 6,
+    innovation: 6,
+    complexity: 6,
+    ownership: 6,
+    impact: 5,
+    score: 46,
+    level: 7
+  },
+  {
+    department: 'Product',
     title: 'Distinguished Product Manager',
     knowledge: 6,
     communication: 6,
@@ -1937,7 +1924,7 @@ export const hudlRoles = [
     level: 8
   },
   {
-    department: 'Product Managers',
+    department: 'Product',
     title: 'Sr. Product Director',
     knowledge: 6,
     communication: 6,
@@ -1950,8 +1937,21 @@ export const hudlRoles = [
     level: 8
   },
   {
-    department: 'Product Managers',
-    title: 'VP Product',
+    department: 'Product',
+    title: 'VP, Product Management',
+    knowledge: 7,
+    communication: 6,
+    gsd: 6,
+    innovation: 7,
+    complexity: 6,
+    ownership: 7,
+    impact: 5,
+    score: 49,
+    level: 9
+  },
+  {
+    department: 'Product',
+    title: 'VP, Product',
     knowledge: 7,
     communication: 6,
     gsd: 6,
@@ -1964,7 +1964,20 @@ export const hudlRoles = [
   },
   {
     department: 'QA',
-    title: 'Quality Analyst',
+    title: 'Quality Assurance Specialist',
+    knowledge: 3,
+    communication: 4,
+    gsd: 3,
+    innovation: 3,
+    complexity: 3,
+    ownership: 4,
+    impact: 3,
+    score: 26,
+    level: 3
+  },
+  {
+    department: 'QA',
+    title: 'Quality Assurance Engineer',
     knowledge: 4,
     communication: 4,
     gsd: 4,
@@ -1977,7 +1990,7 @@ export const hudlRoles = [
   },
   {
     department: 'QA',
-    title: 'Senior QA',
+    title: 'Senior Quality Assurance Engineer',
     knowledge: 5,
     communication: 5,
     gsd: 5,
@@ -1990,7 +2003,7 @@ export const hudlRoles = [
   },
   {
     department: 'QA',
-    title: 'Lead QA',
+    title: 'Lead Quality Assurance Engineer',
     knowledge: 5,
     communication: 6,
     gsd: 5,
@@ -2029,7 +2042,7 @@ export const hudlRoles = [
   },
   {
     department: 'QA',
-    title: 'VP - Quality',
+    title: 'VP, Quality',
     knowledge: 7,
     communication: 7,
     gsd: 7,
@@ -2120,6 +2133,19 @@ export const hudlRoles = [
   },
   {
     department: 'Sales',
+    title: 'Sr. Account Executive',
+    knowledge: 5,
+    communication: 6,
+    gsd: 4,
+    innovation: 4,
+    complexity: 4,
+    ownership: 3,
+    impact: 4,
+    score: 34,
+    level: 5
+  },
+  {
+    department: 'Sales',
     title: 'Territory Manager (International Only)',
     knowledge: 5,
     communication: 6,
@@ -2133,6 +2159,19 @@ export const hudlRoles = [
   },
   {
     department: 'Sales',
+    title: 'Director, Sales',
+    knowledge: 6,
+    communication: 7,
+    gsd: 6,
+    innovation: 4,
+    complexity: 6,
+    ownership: 5,
+    impact: 6,
+    score: 46,
+    level: 7
+  },
+  {
+    department: 'Sales',
     title: 'Sr. Director, Sales',
     knowledge: 6,
     communication: 7,
@@ -2143,32 +2182,6 @@ export const hudlRoles = [
     impact: 6,
     score: 47,
     level: 8
-  },
-  {
-    department: 'Sales',
-    title: 'EVP - Global Sales',
-    knowledge: 7,
-    communication: 8,
-    gsd: 7,
-    innovation: 6,
-    complexity: 7,
-    ownership: 7,
-    impact: 6,
-    score: 54,
-    level: 10
-  },
-  {
-    department: 'Sales',
-    title: 'VP - Customer Success',
-    knowledge: 7,
-    communication: 7,
-    gsd: 6,
-    innovation: 6,
-    complexity: 6,
-    ownership: 6,
-    impact: 6,
-    score: 50,
-    level: 9
   },
   {
     department: 'Sales Ops',
@@ -2224,7 +2237,7 @@ export const hudlRoles = [
   },
   {
     department: 'Sales Ops',
-    title: 'Sr. Sales Enablement Manager',
+    title: 'Sr. Manager, Sales Enablement',
     knowledge: 6,
     communication: 6,
     gsd: 5,
@@ -2276,7 +2289,7 @@ export const hudlRoles = [
   },
   {
     department: 'Sales Ops',
-    title: 'Sales Operations Director',
+    title: 'Director, Sales Operations',
     knowledge: 6,
     communication: 7,
     gsd: 5,
@@ -2288,8 +2301,8 @@ export const hudlRoles = [
     level: 7
   },
   {
-    department: 'ScrumMasters',
-    title: 'ScrumMaster',
+    department: 'Scrum',
+    title: 'Associate Scrum Master',
     knowledge: 4,
     communication: 5,
     gsd: 4,
@@ -2301,8 +2314,21 @@ export const hudlRoles = [
     level: 4
   },
   {
-    department: 'ScrumMasters',
-    title: 'Sr. ScrumMaster',
+    department: 'Scrum',
+    title: 'Scrum Master',
+    knowledge: 4,
+    communication: 5,
+    gsd: 4,
+    innovation: 3,
+    complexity: 3,
+    ownership: 4,
+    impact: 3,
+    score: 29,
+    level: 4
+  },
+  {
+    department: 'Scrum',
+    title: 'Sr. Scrum Master',
     knowledge: 5,
     communication: 6,
     gsd: 5,
@@ -2314,8 +2340,8 @@ export const hudlRoles = [
     level: 5
   },
   {
-    department: 'ScrumMasters',
-    title: 'Lead ScrumMaster',
+    department: 'Scrum',
+    title: 'Lead Scrum Master',
     knowledge: 6,
     communication: 6,
     gsd: 5,
@@ -2327,21 +2353,8 @@ export const hudlRoles = [
     level: 6
   },
   {
-    department: 'ScrumMasters',
-    title: 'Principal ScrumMaster',
-    knowledge: 7,
-    communication: 6,
-    gsd: 5,
-    innovation: 5,
-    complexity: 6,
-    ownership: 6,
-    impact: 5,
-    score: 45,
-    level: 7
-  },
-  {
-    department: 'ScrumMasters',
-    title: 'Sr. Delivery Manager',
+    department: 'Scrum',
+    title: 'Sr. Manager, Scrum',
     knowledge: 5,
     communication: 5,
     gsd: 5,
@@ -2353,33 +2366,7 @@ export const hudlRoles = [
     level: 6
   },
   {
-    department: 'ScrumMasters',
-    title: 'Delivery Director',
-    knowledge: 6,
-    communication: 6,
-    gsd: 6,
-    innovation: 5,
-    complexity: 6,
-    ownership: 5,
-    impact: 6,
-    score: 46,
-    level: 7
-  },
-  {
-    department: 'ScrumMasters',
-    title: 'Lead Agile Coach',
-    knowledge: 6,
-    communication: 6,
-    gsd: 4,
-    innovation: 4,
-    complexity: 4,
-    ownership: 5,
-    impact: 6,
-    score: 41,
-    level: 6
-  },
-  {
-    department: 'ScrumMasters',
+    department: 'Scrum',
     title: 'Director, Agile Coaching',
     knowledge: 6,
     communication: 6,
@@ -2392,7 +2379,7 @@ export const hudlRoles = [
     level: 7
   },
   {
-    department: 'ScrumMasters',
+    department: 'Scrum',
     title: 'Sr. Director, Agile Coaching',
     knowledge: 6,
     communication: 6,
@@ -2504,8 +2491,8 @@ export const hudlRoles = [
     innovation: 5,
     complexity: 4,
     ownership: 6,
-    impact: 4,
-    score: 39,
+    impact: 5,
+    score: 41,
     level: 6
   },
   {
