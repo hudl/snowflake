@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import roles from '../roles';
+import roles from '../static/roles';
 import type { MilestoneMap } from '../constants';
 
 let LookupSelect = undefined;

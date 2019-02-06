@@ -11,7 +11,7 @@ import {
   milestones,
   milestoneToPoints
 } from '../constants';
-import roles from '../roles';
+import roles from '../static/roles';
 import PointSummaries from '../components/PointSummaries';
 import type { Milestone, MilestoneMap, TrackId } from '../constants';
 import React from 'react';

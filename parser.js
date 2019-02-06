@@ -40,7 +40,7 @@ const processData = () => {
             return trimmedRole;
           });
       writeFile(
-        `roles.json`,
+        `static/roles.json`,
         JSON.stringify({ hudlRoles: roles }),
         error => {
           console.log('Parsed CSV to JSON');

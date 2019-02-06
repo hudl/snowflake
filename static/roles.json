@@ -2160,7 +2160,7 @@
     },
     {
       "department": "Decision Science",
-      "title": "Sr. Manager, Data Analystics",
+      "title": "Sr. Manager, Data Analytics",
       "knowledge": 6,
       "communication": 5,
       "gsd": 5,
@@ -2498,7 +2498,20 @@
     },
     {
       "department": "Legal",
-      "title": "Deputy General Counsel/ Legal Director",
+      "title": "Deputy General Counsel",
+      "knowledge": 6,
+      "communication": 7,
+      "gsd": 6,
+      "innovation": 5,
+      "complexity": 6,
+      "ownership": 6,
+      "impact": 5,
+      "score": 46,
+      "level": 7
+    },
+    {
+      "department": "Legal",
+      "title": "Director, Legal",
       "knowledge": 6,
       "communication": 7,
       "gsd": 6,
