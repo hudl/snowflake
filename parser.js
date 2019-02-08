@@ -1,52 +1,39 @@
 const csv = require('csvtojson');
 const writeFile = require('fs').writeFile;
 const path = require('path');
-
-const trimObj = obj => {
-    if (!Array.isArray(obj) && typeof obj != 'object') return obj;
-    return Object.keys(obj).reduce(
-      function(acc, key) {
-        acc[key.trim().toLowerCase()] =
-          typeof obj[key] == 'string' ? obj[key].trim() : trimObj(obj[key]);
-        return acc;
-      },
-      Array.isArray(obj) ? [] : {}
-    );
-  };
+const config = require('./config');
+const { google } = require('googleapis');
+// const AWS = require('aws-sdk');
+// const s3 = new AWS.s3();
 
 const processData = () => {
-  if (process.argv[2] === undefined) {
-    console.log('Missing data file to parse');
-    return;
-  }
-
-  const fileLocation = process.argv[2];
-  csv({
-    colParser:{
-        "KNOWLEDGE":"number",
-        "COMMUNICATION":"number",
-        "GSD":"number",
-        "INNOVATION":"number",
-        "COMPLEXITY":"number",
-        "OWNERSHIP":"number",
-        "IMPACT":"number",
-        "Score":"number",
-        "level":"number",
-    }})
-    .fromFile(fileLocation)
-    .then(roles => {
-        roles = roles.map(role => {
-            const trimmedRole = trimObj(role);
-            return trimmedRole;
-          });
+  const sheets = google.sheets({ version: 'v4' });
+  sheets.spreadsheets.values.get(
+    {
+      spreadsheetId: config.spreadsheetId,
+      range: 'Roles!A:K',
+      key: config.apiKey
+    },
+    (err, res) => {
+      if (err) return console.log('The API returned an error: ' + err);
+      const data = res.data.values;
+      const objectKeys = data.shift().map(header => header.toLowerCase());
+      const parsedRoles = data.map(rawRole => {
+        let role = {};
+        objectKeys.forEach((key, index) => {
+          role[key] = index > 1 ? parseInt(rawRole[index]) : rawRole[index];
+        });
+        return role;
+      });
       writeFile(
         `static/roles.json`,
-        JSON.stringify({ hudlRoles: roles }),
+        JSON.stringify({ hudlRoles: parsedRoles }),
         error => {
           console.log('Parsed CSV to JSON');
         }
       );
-    });
+    }
+  );
 };
 
 processData();

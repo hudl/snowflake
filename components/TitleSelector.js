@@ -28,7 +28,7 @@ class TitleSelector extends React.Component<Props> {
     let options = {};
     roles.hudlRoles
       .sort((roleA, roleB) => {
-        if (roleA.department.toLowerCase() === roleB.department.toLowerCase()) {
+        if (roleA.team.toLowerCase() === roleB.team.toLowerCase()) {
           if (roleA.score === roleB.score) {
             if (roleA.title.toLowerCase() < roleB.title.toLowerCase())
               return -1;
@@ -38,19 +38,19 @@ class TitleSelector extends React.Component<Props> {
             return roleA.score - roleB.score;
           }
         } else {
-          if (roleA.department.toLowerCase() < roleB.department.toLowerCase())
+          if (roleA.team.toLowerCase() < roleB.team.toLowerCase())
             return -1;
-          if (roleA.department.toLowerCase() > roleB.department.toLowerCase())
+          if (roleA.team.toLowerCase() > roleB.team.toLowerCase())
             return 1;
           return 0;
         }
       })
       .forEach(role => {
-        if (!(role.department in options)) {
-          //the department hasn't been added to the options object
-          options[role.department] = { label: role.department, options: [] };
+        if (!(role.team in options)) {
+          //the team hasn't been added to the options object
+          options[role.team] = { label: role.team, options: [] };
         }
-        options[role.department].options.push({
+        options[role.team].options.push({
           label: role.title,
           value: role.title,
           scoredata: {
