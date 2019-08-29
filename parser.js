@@ -29,7 +29,7 @@ const processData = () => {
         `static/roles.json`,
         JSON.stringify({ hudlRoles: parsedRoles }),
         error => {
-          console.log('Parsed CSV to JSON');
+          console.log('Parsed Google Sheet to JSON');
         }
       );
     }
