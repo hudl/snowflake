@@ -38,10 +38,8 @@ class TitleSelector extends React.Component<Props> {
             return roleA.score - roleB.score;
           }
         } else {
-          if (roleA.team.toLowerCase() < roleB.team.toLowerCase())
-            return -1;
-          if (roleA.team.toLowerCase() > roleB.team.toLowerCase())
-            return 1;
+          if (roleA.team.toLowerCase() < roleB.team.toLowerCase()) return -1;
+          if (roleA.team.toLowerCase() > roleB.team.toLowerCase()) return 1;
           return 0;
         }
       })
@@ -94,7 +92,7 @@ class TitleSelector extends React.Component<Props> {
               parent="icon"
             >
               <Link
-                href={`https://hudlies.hudltools.com/?search=title:${encodeURI(
+                href={`https://hudlies.hudltools.com/?search=title%3D${encodeURI(
                   currentValue
                 )}`}
                 target="_blank"
