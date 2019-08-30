@@ -1,10 +1,10 @@
-# Snowflake
+# Hudl Levels
 
-Snowflake is Medium's tool for planning and supporting our engineers' career development. You can read more
+Levels is Hudl's tool for sharing information related to the expectations of every role in the company, and how those expectations map to compensation levels. People Ops grades each role against a rubric, allowing for roles in departments across the company to be recognized equally. 
+
+Levels is an extension of Snowflake. Snowflake is Medium's tool for planning and supporting our engineers' career development. You can read more
 about how we use this tool in our [growth framework documentation](https://medium.com/s/engineering-growth-framework).
 Our growth tool is hosted [publicly](https://snowflake.medium.com).
-
-![The Lannisters send their regards](https://i.imgur.com/e9DYLBr.png)
 
 ## Contributions
 
@@ -31,7 +31,6 @@ Install dependencies:
 
 This will put a static version of the site in `out/`.
 
-## Future work
+### Deployment
 
-* Load initial data from a file, to improve flexibility.
-* Add restricted job title selection and validation.
+Levels is hosted statically on S3. To deploy a new version, simply upload the contents of `out/` into the bucket `levels.hudltools.com`. Make sure to make the contents publicly readable (this bucket is inside our internal VPC, so you can only access the contents on network).
